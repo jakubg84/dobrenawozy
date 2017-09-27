@@ -1,0 +1,3291 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+/* 
+Theme Name: Dobre Nawozy
+Theme URI: https://egddesign.com
+Description: Szablon dla Dobre-Nawozy.pl
+Template: responsive-mobile
+Version: 1.0.0
+Author: EGDDesign
+Author URI: https://egddesign.com
+License: GNU General Public License
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: responsive-mobile-child
+Responsywny szablon Dobre Nawozy, Copyright (C) 2017 EGDDesign
+*/
+/*--------------------------------------------------------------
+1.0 - Body
+--------------------------------------------------------------*/
+body {
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+.wdi_ctrl_btn_container {
+  background-color: rgba(47, 47, 47, 0.8);
+}
+#main-navigation .main-nav ul li {
+  position: static;
+}
+.top-menu {
+  display: block;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.fix-search {
+  position: fixed;
+  z-index: 1000;
+  background: #fff !important;
+  width: 100%;
+  top: 0px;
+  margin-top: 0px !important;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  transition: width 0.2s;
+  -webkit-appearance: none;
+}
+.fix-pasek {
+  position: fixed;
+}
+/*--------------------------------------------------------------
+1.1 - Galeria / Zdjęcia itp itd
+--------------------------------------------------------------*/
+.pswp__bg {
+  background: #fff;
+}
+button.pswp__button,
+button.pswp__button--arrow--left::before,
+button.pswp__button--arrow--right::before,
+button.pswp__button:hover {
+  background-color: #2e6c7a !important;
+}
+.pswp__ui--fit .pswp__top-bar,
+.pswp__ui--fit .pswp__caption {
+  background-color: #2e6c7a;
+}
+.pswp__ui--fit .pswp__top-bar .pswp__caption__center,
+.pswp__ui--fit .pswp__caption .pswp__caption__center {
+  display: none;
+}
+/*--------------------------------------------------------------
+2.1 - Header / Menu Top
+--------------------------------------------------------------*/
+#top-menu-container {
+  padding: 5px 0;
+  background-color: #fff;
+}
+#top-menu-container .top-menu li a {
+  color: #2e6c7a;
+  text-transform: uppercase;
+  font-size: .85em;
+}
+#top-menu-container .top-menu li a:hover {
+  color: #9bb925;
+}
+#top-menu-container .top-menu li a:hover > .top-menu li:before {
+  color: #9bb925;
+}
+#top-menu-container .top-menu li:before:hover {
+  color: #9bb925;
+}
+#top-menu-container .top-menu li#menu-item-10:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  padding: 0px 5px;
+  color: #2e6c7a;
+}
+#top-menu-container .top-menu li#menu-item-8:before {
+  content: "\f0c0";
+  font-family: FontAwesome;
+  padding: 0px 5px;
+  color: #2e6c7a;
+}
+#top-menu-container .top-menu li#menu-item-9:before {
+  content: "\f291";
+  font-family: FontAwesome;
+  padding: 0px 5px;
+  color: #2e6c7a;
+}
+/*--------------------------------------------------------------
+2.1.1 - Header / Menu Top / Wyszukiwarka
+--------------------------------------------------------------*/
+#top-menu-container .top-menu li#menu-item-10 .search {
+  /*width: 246px;*/
+  /*text-align: left;*/
+  cursor: default;
+  height: 100px;
+  display: block;
+  /*padding: 30px 200px;*/
+}
+.wyszukiwarka {
+  display: none;
+  float: right;
+  width: 390px;
+}
+.wyszukiwarka .aws-container .aws-search-field {
+  width: 70%;
+  float: left;
+  background: #2e6c7a;
+  color: #fff !important;
+  font-size: 1em;
+  text-transform: lowercase;
+}
+.wyszukiwarka input[type="text"] {
+  border: 0px;
+  box-shadow: none;
+}
+.wyszukiwarka input[type="text"]::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #fff;
+  font-size: 1em;
+}
+.wyszukiwarka input[type="text"]:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  opacity: 1;
+}
+.wyszukiwarka input[type="text"]::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+  opacity: 1;
+}
+.wyszukiwarka input[type="text"]:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+}
+.wyszukiwarka input[type="text"]::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fff;
+}
+.wyszukiwarka button.zamknij {
+  display: none;
+  /*line-height: 2.4em;*/
+  font-size: 1em;
+  padding: 7px;
+  color: #fff;
+  margin-left: 2px;
+  background-color: #2e6c7a;
+  border-radius: 0px;
+  border: 0px;
+}
+/*--------------------------------------------------------------
+2.2.1 - Header / Menu Top / Pokaż koszyk jak zalogowany
+--------------------------------------------------------------*/
+#top-menu-container .top-menu li#menu-item-9 .pokazkoszyk {
+  /*width: 246px;*/
+  /*text-align: left;*/
+  cursor: default;
+  display: block;
+  /*padding: 30px 200px;*/
+}
+.koszyk {
+  display: none;
+  float: right;
+  width: 170px;
+  min-height: 182px;
+  position: absolute;
+  right: 1%;
+  top: 35px;
+  background-color: #e6e6e6;
+  border-bottom: 1px solid #2e6c7a;
+  z-index: 1000;
+}
+.koszyk .koszyk-zamknij {
+  /*float: right;*/
+  text-align: right;
+  display: block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.koszyk .koszyk-zamknij:before {
+  content: "\f2d3";
+  font-family: FontAwesome;
+  padding: 10px 10px;
+  color: #2e6c7a;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+.koszyk .koszyk-zamknij:hover:before {
+  content: "\f2d4";
+  font-family: FontAwesome;
+  color: #728f01;
+}
+.koszyk .koszyk-srodek {
+  padding: 0px 10px;
+  color: #2e6c7a;
+  font-size: 1em;
+}
+.koszyk .koszyk-srodek .produkt-jeden:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  padding: 10px 10px;
+  color: #2e6c7a;
+  font-size: 1.1em;
+  display: block;
+  float: left;
+}
+.koszyk .koszyk-srodek .produkt-jeden {
+  /*margin: 5px 10px;*/
+  font-size: .85em;
+  border-bottom: 1px solid #fff;
+  padding: 0px 0px 5px 0px;
+}
+.koszyk .koszyk-srodek .pokaz-sume {
+  font-size: .9em;
+}
+.koszyk .koszyk-srodek a.zobacz-koszyk,
+.koszyk .koszyk-srodek a.zobacz-zamowienie {
+  margin-top: 15px;
+  padding: 5px;
+  display: block;
+  float: left;
+  background-color: #2e6c7a;
+  color: #fff;
+  border-right: 1px solid #e6e6e6;
+}
+.koszyk .koszyk-srodek a.zobacz-koszyk:hover,
+.koszyk .koszyk-srodek a.zobacz-zamowienie:hover {
+  background-color: #728f01;
+  text-decoration: none;
+}
+.koszyk .koszyk-srodek a.zobacz-koszyk:before {
+  content: "\f291";
+  font-family: FontAwesome;
+  /*padding: 10px 10px;*/
+  color: #fff;
+  display: block;
+  width: 100%;
+  font-size: .8em;
+  text-align: center;
+}
+.koszyk .koszyk-srodek a.zobacz-zamowienie:before {
+  content: "\f03a";
+  font-family: FontAwesome;
+  /*padding: 10px 10px;*/
+  color: #fff;
+  display: block;
+  width: 100%;
+  font-size: .8em;
+  text-align: center;
+}
+/*--------------------------------------------------------------
+2.2.2 - Header / Menu Top / Pokaż konto jak zalogowany
+--------------------------------------------------------------*/
+#top-menu-container .top-menu li#menu-item-8 .pokazkonto {
+  /*width: 246px;*/
+  /*text-align: left;*/
+  cursor: default;
+  display: block;
+  /*padding: 30px 200px;*/
+}
+.konto {
+  display: none;
+  float: right;
+  width: 130px;
+  min-height: 140px;
+  position: absolute;
+  right: 14%;
+  top: 35px;
+  background-color: #e6e6e6;
+  border-bottom: 1px solid #2e6c7a;
+}
+.konto .user-info {
+  display: block;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  color: #2e6c7a;
+}
+.konto .user-info .nazwa {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.konto .menu-menu-user-container #menu-menu-user {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.konto .menu-menu-user-container #menu-menu-user li {
+  list-style: none;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+  color: #2e6c7a;
+}
+.konto .menu-menu-user-container #menu-menu-user li a {
+  color: #2e6c7a;
+}
+.konto .menu-menu-user-container #menu-menu-user li a:hover {
+  text-decoration: none;
+  color: #728f01;
+}
+.konto .konto-zamknij {
+  /*float: right;*/
+  text-align: right;
+  display: block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.konto .konto-zamknij:before {
+  content: "\f2d3";
+  font-family: FontAwesome;
+  padding: 10px 10px;
+  color: #2e6c7a;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+.konto .konto-zamknij:hover:before {
+  content: "\f2d4";
+  font-family: FontAwesome;
+  color: #728f01;
+  cursor: pointer;
+}
+/*--------------------------------------------------------------
+2.1.1 - Header / Menu Top / Wyniki wyszukiwania
+--------------------------------------------------------------*/
+.aws-search-result {
+  top: 75px !important;
+  border: 1px solid #2e6c7a;
+}
+.aws-search-result ul li {
+  border-bottom: 1px solid #2e6c7a;
+}
+.aws-search-result ul li a .aws_result_content .aws_result_title {
+  font-size: 1.2em;
+  color: #2e6c7a;
+}
+.aws-search-result ul li a .aws_result_content .aws_result_excerpt {
+  color: #2e6c7a;
+}
+.aws-search-result ul li a .aws_result_content .aws_result_price {
+  padding: 2px 10px;
+  color: #fff;
+  background-color: #2e6c7a;
+  width: 80px;
+  text-align: center;
+  margin: 10px 0px 5px 0px;
+  line-height: 2em;
+  font-weight: 600;
+  /*.woocommerce-Price-amount:before {
+						content: "Cena :";
+					}*/
+}
+/*--------------------------------------------------------------
+2.2 - Header / Logo Top
+--------------------------------------------------------------*/
+#header {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#header .container .logo-top {
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 68px;
+  margin-left: -126px;
+}
+#header .container .fix-gorne-logo {
+  display: none;
+}
+/*--------------------------------------------------------------
+2.2 - Header / Menu Top
+--------------------------------------------------------------*/
+.fixed {
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  top: 50;
+  width: 100%;
+}
+.pasek-dol {
+  position: relative;
+  height: 42px;
+  top: -1px;
+}
+#main-menu-container .main-nav ul li.current-menu-item ul.sub-menu {
+  visibility: visible;
+  /* shows sub-menu */
+  color: #fff;
+  display: block;
+}
+#main-menu-container .main-nav ul li.current-menu-item:before {
+  content: url(images/menu-before.jpg);
+  width: 44px;
+  height: 9px;
+  display: block;
+  float: none;
+  position: absolute;
+  top: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  z-index: 1000;
+}
+.main-nav ul li:hover ~ .pasek-dol {
+  position: relative;
+  background-color: #2e6c7a !important;
+  height: 42px;
+  top: -1px;
+}
+#main-menu-container {
+  background-color: transparent;
+  /*padding-top: 172px;
+	padding-top: 155px;*/
+  /*padding-top: 190px;*/
+  /*padding-top: 210px;*/
+  margin-top: 210px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+#main-menu-container .main-nav {
+  /*ul.sub-menu:before {
+		
+		content: url(images/menu-before.jpg); 
+				width: 44px;
+				height: 9px;
+				display: block;
+				float: none;
+				position: absolute;
+				top: -25px;
+				margin-left: 15px;
+				margin-right: 15px;		
+				z-index: 1000;		
+		}*/
+}
+#main-menu-container .main-nav ul li#menu-item-180.current-menu-item:before,
+#main-menu-container .main-nav ul li#menu-item-18.current-menu-item:before,
+#main-menu-container .main-nav ul li#menu-item-23.current-menu-item:before,
+#main-menu-container .main-nav ul li#menu-item-24.current-menu-item:before {
+  display: none;
+}
+#main-menu-container .main-nav ul li#menu-item-11.current-menu-item:before {
+  margin-left: 2%;
+}
+#main-menu-container .main-nav #menu-item-18 {
+  /*padding-right: 150px !important;*/
+}
+#main-menu-container .main-nav .menu-item-23 {
+  padding-left: 460px !important;
+}
+#main-menu-container .main-nav .fix-logo-przesun {
+  padding-left: 0px !important;
+}
+#main-menu-container .main-nav .menu-item-180 {
+  display: none;
+}
+#main-menu-container .main-nav .menu-item-180 a {
+  padding: 0px;
+  width: 100%;
+}
+#main-menu-container .main-nav .menu-item-180 a:before {
+  content: url(images/logo-top-mini.jpg);
+  width: 55px;
+  height: 48px;
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+#main-menu-container .main-nav .fix-logo {
+  display: block;
+  width: 460px;
+  text-align: center;
+}
+#main-menu-container .main-nav ul li a {
+  color: #2e6c7a;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  padding: 13px;
+  margin: 0px;
+}
+#main-menu-container .main-nav ul li a:hover {
+  color: #9bb925;
+}
+#main-menu-container .main-nav ul li a:hover ~ ul.sub-menu {
+  background-color: #2e6c7a;
+  display: block;
+  width: 100%;
+  min-width: 1349px;
+}
+#main-menu-container .main-nav ul.sub-menu {
+  /*min-width: 850px;*/
+  /*position: absolute;*/
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 45px;
+  font-size: 10px;
+  -webkit-transition: height .2s;
+  -moz-transition: height .2s;
+  -o-transition: height .2s;
+  transition: height .2s;
+  width: 100%;
+  overflow: hidden;
+  line-height: 42px;
+  left: 0;
+  background: #2e6c7a;
+}
+#main-menu-container .main-nav ul.sub-menu li {
+  float: left;
+  display: block;
+}
+#main-menu-container .main-nav ul.sub-menu li a {
+  color: #fff;
+}
+#main-menu-container .main-nav ul.sub-menu li a:hover {
+  color: #9BB927;
+}
+#main-menu-container .main-nav ul li:hover .sub-menu {
+  visibility: visible;
+  /* shows sub-menu */
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
+  /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+#main-menu-container .main-nav ul li#menu-item-11:hover:before {
+  content: url(images/menu-before.jpg);
+  width: 44px;
+  height: 9px;
+  display: block;
+  float: none;
+  position: absolute;
+  top: 30px;
+  margin-left: 10px;
+  /*20%*/
+  margin-right: 20%;
+  z-index: 1000;
+}
+/*--------------------------------------------------------------
+2.3 - Header / Slider
+--------------------------------------------------------------*/
+.blok-slider {
+  border-top: 2px solid #2e6c7a;
+  padding-top: 2px;
+}
+.blok-slider .flex-control-nav {
+  bottom: 10px;
+  z-index: 100000;
+}
+.blok-slider .flex-control-paging li a {
+  background: transparent;
+  text-indent: initial;
+  color: #fff;
+  font-size: 1.2em;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  padding: 8px 0px;
+}
+.blok-slider .flex-control-paging li a.flex-active {
+  background: transparent;
+  text-indent: initial;
+  color: #fff;
+  font-size: 1.2em;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  padding: 8px 0px;
+}
+.blok-slider .flex-control-paging li a:hover {
+  background: #9bb925;
+  text-decoration: none;
+}
+.blok-slider .flex-control-paging li a.flex-active:hover {
+  background: transparent;
+  text-decoration: none;
+}
+/*--------------------------------------------------------------
+2.4 - Strona główna / Bloki produktów
+--------------------------------------------------------------*/
+#wrapper .content-area {
+  padding: 0px;
+  /*--------------------------------------------------------------
+2.5 - Strona główna / Blok aktualności
+--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+2.6 - Strona główna / Blok Instagram
+--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+2.7 - Strona główna / Treść
+--------------------------------------------------------------*/
+}
+#wrapper .content-area .box-produkty {
+  display: block;
+}
+#wrapper .content-area .box-produkty h2 {
+  display: table;
+  white-space: nowrap;
+  font-size: 1.65em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #2e6c7a;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  /*margin-left: -60px;*/
+}
+#wrapper .content-area .box-produkty h2:before,
+#wrapper .content-area .box-produkty h2:after {
+  border-top: 2px solid #2e6c7a;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.5em;
+  width: 355px;
+}
+#wrapper .content-area .box-produkty h2:before {
+  right: 60px;
+}
+#wrapper .content-area .box-produkty h2:after {
+  left: 50px;
+}
+#wrapper .content-area .box-produkty .widget_sp_image {
+  width: 33%;
+  float: left;
+  /*.widget_sp_image-description {
+   				 position: relative;
+   				 bottom: 200px;
+   				 z-index: 10000;
+   				 color: transparent;
+					    p {
+					    	margin: 0;
+					    }
+					}
+				.widget_sp_image-description:hover {
+					color: #000;
+				}*/
+}
+#wrapper .content-area .box-produkty .widget_sp_image #widget-title-one .widget-title-home {
+  display: none;
+}
+#wrapper .content-area .box-produkty .widget_sp_image a:hover img {
+  opacity: .7;
+}
+#wrapper .content-area .box-aktualnosci {
+  display: block;
+}
+#wrapper .content-area .box-aktualnosci h2 {
+  display: table;
+  white-space: nowrap;
+  font-size: 1.65em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #2e6c7a;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  /*margin-left: -60px;*/
+}
+#wrapper .content-area .box-aktualnosci h2:before,
+#wrapper .content-area .box-aktualnosci h2:after {
+  border-top: 2px solid #2e6c7a;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.5em;
+  width: 355px;
+}
+#wrapper .content-area .box-aktualnosci h2:before {
+  right: 25px;
+}
+#wrapper .content-area .box-aktualnosci h2:after {
+  left: 15px;
+}
+#wrapper .content-area .box-aktualnosci #sticky-posts-2 #widget-title-two {
+  display: none;
+}
+#wrapper .content-area .box-aktualnosci #sticky-posts-2 .upw-posts article {
+  border-bottom: 0;
+}
+#wrapper .content-area .box-aktualnosci #sticky-posts-2 .upw-posts article h4.entry-title,
+#wrapper .content-area .box-aktualnosci #sticky-posts-2 .upw-posts article a {
+  font-weight: 600;
+  color: #2e6c7a;
+  margin-bottom: 20px;
+}
+#wrapper .content-area .box-aktualnosci #sticky-posts-2 .upw-posts article .entry-content {
+  color: #2e6c7a;
+  font-weight: 300;
+}
+#wrapper .content-area .box-aktualnosci #sticky-posts-2 .upw-posts article .entry-content p {
+  line-height: 1.6em;
+}
+#wrapper .content-area .box-aktualnosci #sticky-posts-2 .upw-posts .category-aktualnosci {
+  width: 45%;
+  float: left;
+}
+#wrapper .content-area .box-aktualnosci #sticky-posts-2 .upw-posts .category-aktualnosci:first-child {
+  margin-right: 5%;
+}
+#wrapper .content-area .box-aktualnosci #sticky-posts-2 .upw-posts .category-aktualnosci:last-child {
+  margin-left: 5%;
+}
+#wrapper .content-area .box-instagram {
+  background-color: #2c6876;
+  /*	h2:before, h2:after {
+		      border-top: 2px solid #2e6c7a;
+		      content: '';
+		      display: table-cell;
+		      position: relative;
+		      top: 0.5em;
+		      width: 355px;
+		    }    
+
+
+   			h2:before { right: 60px; }
+   			h2:after { left: 50px; }*/
+}
+#wrapper .content-area .box-instagram h2 {
+  display: table;
+  white-space: nowrap;
+  font-size: 1.35em;
+  font-weight: 300;
+  /*text-align: left;*/
+  text-transform: uppercase;
+  color: #FFF;
+  margin-top: 20px;
+  /*margin-bottom: 25px;*/
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0px;
+  margin-bottom: 0px;
+  /*margin-left: -60px;*/
+}
+#wrapper .content-area .box-instagram #wdi_feed_0 .wdi_photo_wrap_inner {
+  border: 0px;
+}
+#wrapper .content-area .box-instagram #wdi_feed_0 .wdi_photo_wrap {
+  padding: 0px;
+  width: calc(100%);
+}
+#wrapper .content-area .box-instagram .widget_sp_image {
+  padding: 0px;
+  width: 25%;
+  float: left;
+}
+#wrapper .content-area .box-instagram .widget_sp_image .widget-title-home {
+  display: none;
+}
+#wrapper .content-area .wiecej {
+  clear: both;
+}
+#wrapper .content-area .wiecej a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin: 10px auto;
+  width: 250px;
+  background-color: #2c6876;
+  color: #fff;
+}
+#wrapper .content-area .wiecej a:hover {
+  text-decoration: none;
+  background-color: #9bb925;
+}
+#wrapper .content-area .site-main {
+  width: 100%;
+  padding: 0px;
+}
+#wrapper .content-area .site-main article .entry-header {
+  display: none;
+}
+#wrapper .content-area .site-main article .post-entry .entry-content p {
+  color: #2c6876;
+}
+#wrapper .content-area .site-main article .post-entry .entry-content p .alignleft {
+  display: inline;
+  float: left;
+  margin-right: 2em;
+}
+#wrapper .content-area .site-main article .post-entry .entry-content h2 {
+  display: block;
+  color: #2c6876;
+  font-size: 2em;
+  font-weight: 300;
+}
+#wrapper .content-area .site-main article .post-entry .entry-content a.art-wiecej {
+  padding: 5px 25px;
+  background-color: #2c6876;
+  color: #fff;
+}
+#wrapper .content-area .site-main article .post-entry .entry-content a.art-wiecej:hover {
+  text-decoration: none;
+  background-color: #9bb925;
+}
+/*--------------------------------------------------------------
+3.1 - Stopka / Ogólnie
+--------------------------------------------------------------*/
+#footer {
+  padding: 0px;
+  background-image: url(images/footer-bg.jpg);
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: cover;
+}
+#footer #footer-wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#footer #footer-widget .footer-widget:first-child {
+  width: 37%;
+}
+#footer #footer-widget .footer-widget {
+  width: 21%;
+}
+#footer #footer-widget #text-2 .widget-title h3,
+#footer #footer-widget #nav_menu-2 .widget-title h3,
+#footer #footer-widget #nav_menu-3 .widget-title h3,
+#footer #footer-widget #nav_menu-4 .widget-title h3 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: 2.2em;
+  font-weight: 300;
+}
+#footer #footer-widget #text-2 .textwidget p,
+#footer #footer-widget #nav_menu-2 .textwidget p,
+#footer #footer-widget #nav_menu-3 .textwidget p,
+#footer #footer-widget #nav_menu-4 .textwidget p,
+#footer #footer-widget #text-2 .textwidget ul,
+#footer #footer-widget #nav_menu-2 .textwidget ul,
+#footer #footer-widget #nav_menu-3 .textwidget ul,
+#footer #footer-widget #nav_menu-4 .textwidget ul,
+#footer #footer-widget #text-2 .textwidget ul li,
+#footer #footer-widget #nav_menu-2 .textwidget ul li,
+#footer #footer-widget #nav_menu-3 .textwidget ul li,
+#footer #footer-widget #nav_menu-4 .textwidget ul li {
+  color: #fff;
+  line-height: 1.6em;
+  overflow: auto;
+}
+#footer #footer-widget #text-2 .textwidget p a,
+#footer #footer-widget #nav_menu-2 .textwidget p a,
+#footer #footer-widget #nav_menu-3 .textwidget p a,
+#footer #footer-widget #nav_menu-4 .textwidget p a,
+#footer #footer-widget #text-2 .textwidget ul a,
+#footer #footer-widget #nav_menu-2 .textwidget ul a,
+#footer #footer-widget #nav_menu-3 .textwidget ul a,
+#footer #footer-widget #nav_menu-4 .textwidget ul a,
+#footer #footer-widget #text-2 .textwidget ul li a,
+#footer #footer-widget #nav_menu-2 .textwidget ul li a,
+#footer #footer-widget #nav_menu-3 .textwidget ul li a,
+#footer #footer-widget #nav_menu-4 .textwidget ul li a {
+  color: #fff;
+}
+#footer #footer-widget #text-2 .textwidget p a:hover,
+#footer #footer-widget #nav_menu-2 .textwidget p a:hover,
+#footer #footer-widget #nav_menu-3 .textwidget p a:hover,
+#footer #footer-widget #nav_menu-4 .textwidget p a:hover,
+#footer #footer-widget #text-2 .textwidget ul a:hover,
+#footer #footer-widget #nav_menu-2 .textwidget ul a:hover,
+#footer #footer-widget #nav_menu-3 .textwidget ul a:hover,
+#footer #footer-widget #nav_menu-4 .textwidget ul a:hover,
+#footer #footer-widget #text-2 .textwidget ul li a:hover,
+#footer #footer-widget #nav_menu-2 .textwidget ul li a:hover,
+#footer #footer-widget #nav_menu-3 .textwidget ul li a:hover,
+#footer #footer-widget #nav_menu-4 .textwidget ul li a:hover {
+  color: #9bb925;
+  text-decoration: none;
+}
+#footer #footer-widget #text-2 .textwidget p a.facebook:before,
+#footer #footer-widget #nav_menu-2 .textwidget p a.facebook:before,
+#footer #footer-widget #nav_menu-3 .textwidget p a.facebook:before,
+#footer #footer-widget #nav_menu-4 .textwidget p a.facebook:before,
+#footer #footer-widget #text-2 .textwidget ul a.facebook:before,
+#footer #footer-widget #nav_menu-2 .textwidget ul a.facebook:before,
+#footer #footer-widget #nav_menu-3 .textwidget ul a.facebook:before,
+#footer #footer-widget #nav_menu-4 .textwidget ul a.facebook:before,
+#footer #footer-widget #text-2 .textwidget ul li a.facebook:before,
+#footer #footer-widget #nav_menu-2 .textwidget ul li a.facebook:before,
+#footer #footer-widget #nav_menu-3 .textwidget ul li a.facebook:before,
+#footer #footer-widget #nav_menu-4 .textwidget ul li a.facebook:before {
+  content: "\f082";
+  font-family: FontAwesome;
+  padding: 10px 10px;
+  color: #fff;
+  font-size: 2.5em;
+  display: block;
+  float: left;
+}
+#footer #footer-widget #text-2 .textwidget p a.facebook:hover,
+#footer #footer-widget #nav_menu-2 .textwidget p a.facebook:hover,
+#footer #footer-widget #nav_menu-3 .textwidget p a.facebook:hover,
+#footer #footer-widget #nav_menu-4 .textwidget p a.facebook:hover,
+#footer #footer-widget #text-2 .textwidget ul a.facebook:hover,
+#footer #footer-widget #nav_menu-2 .textwidget ul a.facebook:hover,
+#footer #footer-widget #nav_menu-3 .textwidget ul a.facebook:hover,
+#footer #footer-widget #nav_menu-4 .textwidget ul a.facebook:hover,
+#footer #footer-widget #text-2 .textwidget ul li a.facebook:hover,
+#footer #footer-widget #nav_menu-2 .textwidget ul li a.facebook:hover,
+#footer #footer-widget #nav_menu-3 .textwidget ul li a.facebook:hover,
+#footer #footer-widget #nav_menu-4 .textwidget ul li a.facebook:hover,
+#footer #footer-widget #text-2 .textwidget p a.instagram:hover,
+#footer #footer-widget #nav_menu-2 .textwidget p a.instagram:hover,
+#footer #footer-widget #nav_menu-3 .textwidget p a.instagram:hover,
+#footer #footer-widget #nav_menu-4 .textwidget p a.instagram:hover,
+#footer #footer-widget #text-2 .textwidget ul a.instagram:hover,
+#footer #footer-widget #nav_menu-2 .textwidget ul a.instagram:hover,
+#footer #footer-widget #nav_menu-3 .textwidget ul a.instagram:hover,
+#footer #footer-widget #nav_menu-4 .textwidget ul a.instagram:hover,
+#footer #footer-widget #text-2 .textwidget ul li a.instagram:hover,
+#footer #footer-widget #nav_menu-2 .textwidget ul li a.instagram:hover,
+#footer #footer-widget #nav_menu-3 .textwidget ul li a.instagram:hover,
+#footer #footer-widget #nav_menu-4 .textwidget ul li a.instagram:hover {
+  text-decoration: none;
+}
+#footer #footer-widget #text-2 .textwidget p a.facebook:hover:before,
+#footer #footer-widget #nav_menu-2 .textwidget p a.facebook:hover:before,
+#footer #footer-widget #nav_menu-3 .textwidget p a.facebook:hover:before,
+#footer #footer-widget #nav_menu-4 .textwidget p a.facebook:hover:before,
+#footer #footer-widget #text-2 .textwidget ul a.facebook:hover:before,
+#footer #footer-widget #nav_menu-2 .textwidget ul a.facebook:hover:before,
+#footer #footer-widget #nav_menu-3 .textwidget ul a.facebook:hover:before,
+#footer #footer-widget #nav_menu-4 .textwidget ul a.facebook:hover:before,
+#footer #footer-widget #text-2 .textwidget ul li a.facebook:hover:before,
+#footer #footer-widget #nav_menu-2 .textwidget ul li a.facebook:hover:before,
+#footer #footer-widget #nav_menu-3 .textwidget ul li a.facebook:hover:before,
+#footer #footer-widget #nav_menu-4 .textwidget ul li a.facebook:hover:before,
+#footer #footer-widget #text-2 .textwidget p a.instagram:hover:before,
+#footer #footer-widget #nav_menu-2 .textwidget p a.instagram:hover:before,
+#footer #footer-widget #nav_menu-3 .textwidget p a.instagram:hover:before,
+#footer #footer-widget #nav_menu-4 .textwidget p a.instagram:hover:before,
+#footer #footer-widget #text-2 .textwidget ul a.instagram:hover:before,
+#footer #footer-widget #nav_menu-2 .textwidget ul a.instagram:hover:before,
+#footer #footer-widget #nav_menu-3 .textwidget ul a.instagram:hover:before,
+#footer #footer-widget #nav_menu-4 .textwidget ul a.instagram:hover:before,
+#footer #footer-widget #text-2 .textwidget ul li a.instagram:hover:before,
+#footer #footer-widget #nav_menu-2 .textwidget ul li a.instagram:hover:before,
+#footer #footer-widget #nav_menu-3 .textwidget ul li a.instagram:hover:before,
+#footer #footer-widget #nav_menu-4 .textwidget ul li a.instagram:hover:before {
+  color: #9bb925;
+}
+#footer #footer-widget #text-2 .textwidget p a.instagram:before,
+#footer #footer-widget #nav_menu-2 .textwidget p a.instagram:before,
+#footer #footer-widget #nav_menu-3 .textwidget p a.instagram:before,
+#footer #footer-widget #nav_menu-4 .textwidget p a.instagram:before,
+#footer #footer-widget #text-2 .textwidget ul a.instagram:before,
+#footer #footer-widget #nav_menu-2 .textwidget ul a.instagram:before,
+#footer #footer-widget #nav_menu-3 .textwidget ul a.instagram:before,
+#footer #footer-widget #nav_menu-4 .textwidget ul a.instagram:before,
+#footer #footer-widget #text-2 .textwidget ul li a.instagram:before,
+#footer #footer-widget #nav_menu-2 .textwidget ul li a.instagram:before,
+#footer #footer-widget #nav_menu-3 .textwidget ul li a.instagram:before,
+#footer #footer-widget #nav_menu-4 .textwidget ul li a.instagram:before {
+  content: "\f16d";
+  font-family: FontAwesome;
+  padding: 10px 10px;
+  color: #fff;
+  display: block;
+  font-size: 2.5em;
+}
+#footer #footer-widget #text-2 .textwidget img,
+#footer #footer-widget #nav_menu-2 .textwidget img,
+#footer #footer-widget #nav_menu-3 .textwidget img,
+#footer #footer-widget #nav_menu-4 .textwidget img {
+  float: left;
+  margin-right: 1.5em;
+  margin-bottom: 3em;
+}
+#footer #footer-widget .widget_nav_menu .menu li a {
+  color: #fff;
+}
+#footer #footer-widget .widget_nav_menu .menu li a:hover {
+  color: #9bb925;
+  text-decoration: none;
+}
+/*--------------------------------------------------------------
+3.2 - Stopka / Copyright i Wykonanie
+--------------------------------------------------------------*/
+#footer-base {
+  margin-left: -15px;
+  margin-right: -15px;
+  width: padding: 20px 0;
+  background-color: #00323d;
+}
+#footer-base .fotter-bottom {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#footer-base .fotter-bottom .copyright,
+#footer-base .fotter-bottom .powered,
+#footer-base .fotter-bottom .scroll-top {
+  color: #fff;
+  text-transform: uppercase;
+}
+#footer-base .fotter-bottom .copyright a,
+#footer-base .fotter-bottom .powered a,
+#footer-base .fotter-bottom .scroll-top a {
+  color: #fff;
+}
+#footer-base .fotter-bottom .copyright a:hover,
+#footer-base .fotter-bottom .powered a:hover,
+#footer-base .fotter-bottom .scroll-top a:hover {
+  color: #9bb925;
+  text-decoration: none;
+}
+/*--------------------------------------------------------------
+5.1 - PODSTRONA / SKLEP / KATEGORIE
+--------------------------------------------------------------*/
+body.page-id-2 {
+  /*	.main-nav ul li#menu-item-11:hover ~ #pasek-bottom {
+			background-color: #2e6c7a;
+		}*/
+}
+body.page-id-2 #pasek-bottom {
+  background-color: transparent;
+}
+body.page-id-2 #main-menu-container:hover ~ #pasek-bottom {
+  background-color: #2e6c7a;
+}
+body.woocommerce-page .site .pasek-dol,
+body.page-id-12 .site .pasek-dol,
+body.page-id-16 .site .pasek-dol,
+body.page-id-14 .site .pasek-dol,
+body.page-id-202 .site .pasek-dol {
+  background-color: #2e6c7a;
+}
+body.post-type-archive nav.woocommerce-breadcrumb {
+  color: #9bb925;
+}
+body.post-type-archive nav.woocommerce-breadcrumb a {
+  color: #2E6C7A;
+}
+body.post-type-archive nav.woocommerce-breadcrumb a:hover {
+  color: #000;
+  text-decoration: none;
+}
+body.post-type-archive ul.products li.product-category h2.woocommerce-loop-category__title {
+  display: none;
+}
+body.post-type-archive ul.products li.product-category a:hover img {
+  opacity: .7;
+}
+body.tax-product_cat header.woocommerce-products-header h1.woocommerce-products-header__title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #2e6c7a;
+  font-weight: 300;
+}
+body.tax-product_cat nav.woocommerce-breadcrumb {
+  color: #9bb925;
+}
+body.tax-product_cat nav.woocommerce-breadcrumb a {
+  color: #2E6C7A;
+}
+body.tax-product_cat nav.woocommerce-breadcrumb a:hover {
+  color: #000;
+  text-decoration: none;
+}
+body.tax-product_cat form.woocommerce-ordering select.orderby {
+  background-color: #fff;
+  border: 1px solid #2e6c7a;
+  box-shadow: none;
+  color: #2e6c7a;
+}
+body.tax-product_cat ul.products li.product {
+  border: 1px solid #2e6c7a;
+  padding: 20px;
+  min-height: 400px;
+  /*310px*/
+  /*--------------------------------------------------------------
+			PRZYCISK - ZAMÓW 
+			--------------------------------------------------------------*/
+}
+body.tax-product_cat ul.products li.product a {
+  /*--------------------------------------------------------------
+			PROMOCJA 
+			--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+			OBRAZEK PRODUKTOWY 
+			--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+			NAZWA PRODUKTU 
+			--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+			CENA PRODUKTU 
+			--------------------------------------------------------------*/
+}
+body.tax-product_cat ul.products li.product a .onsale {
+  border-radius: 0%;
+  width: 100%;
+  margin: 0;
+  opacity: .8;
+  /*margin: -1.5em 0 0 0;*/
+  margin: 2.5em 0 0 0;
+  background-color: #2e6c7a;
+  font-size: 2em;
+  font-weight: 300;
+  padding: 0px;
+  line-height: 1.5em;
+  min-width: 0;
+  min-height: 0;
+}
+body.tax-product_cat ul.products li.product a h2.woocommerce-loop-product__title {
+  font-size: 1.1em;
+  color: #2E6C7B;
+  font-weight: 600;
+  min-height: 50px;
+}
+body.tax-product_cat ul.products li.product a .price {
+  font-size: 1.1em;
+  /*padding: 5px 10px;*/
+  /**padding: .618em 1em;**/
+  padding: .618em .5em;
+  background-color: #9bb925;
+  color: #fff;
+  white-space: nowrap;
+  display: inline-block;
+  box-shadow: none;
+  text-shadow: none;
+  line-height: 1;
+  width: 45%;
+  text-align: center;
+}
+body.tax-product_cat ul.products li.product a .price del {
+  opacity: .8;
+  visibility: hidden;
+  display: none;
+}
+body.tax-product_cat ul.products li.product a .price ins {
+  text-decoration: none;
+}
+body.tax-product_cat ul.products li.product a .price:hover del {
+  visibility: visible;
+  display: block;
+  margin-bottom: 10px;
+  --webkit-transition: height 4s;
+  /* For Safari 3.1 to 6.0 */
+  transition: height 4s;
+}
+body.tax-product_cat ul.products li.product a.add_to_cart_button {
+  font-size: 1.1em;
+  /*padding: 5px 10px;*/
+  padding: .618em 1em;
+  background-color: #2e6c7a;
+  color: #fff;
+  white-space: nowrap;
+  display: inline-block;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 0px;
+  font-weight: normal;
+  width: 45%;
+  text-align: center;
+}
+body.tax-product_cat ul.products li.product a.add_to_cart_button:hover {
+  background-color: #9bb925;
+  color: #fff;
+}
+/*--------------------------------------------------------------
+			WŁASNE POLE - NP: OBEJRZY NASZE FILMY ITP
+	--------------------------------------------------------------*/
+.custom-add.trawniki.content-area {
+  clear: both;
+}
+.trawniki h2 {
+  display: table;
+  white-space: nowrap;
+  font-size: 1.65em;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #2e6c7a;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.trawniki h2:before,
+.trawniki h2:after {
+  border-top: 1px solid #2e6c7a;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.5em;
+  width: 355px;
+}
+.trawniki h2:before {
+  right: 60px;
+}
+.trawniki h2:after {
+  left: 50px;
+}
+.trawniki #primary-sidebar .widget_sp_image,
+.trawniki #primary-sidebar .widget_text {
+  width: 49%;
+  padding: 0px;
+  float: left;
+}
+.trawniki #primary-sidebar .widget_sp_image h3.widget-title-home,
+.trawniki #primary-sidebar .widget_text h3.widget-title-home {
+  color: #2e6c7a;
+  padding-bottom: 20px;
+  font-size: 1.4em;
+  min-height: 90px;
+}
+.trawniki #primary-sidebar .widget_sp_image a img,
+.trawniki #primary-sidebar .widget_text a img {
+  border: 1px solid #2e6c7a;
+}
+.trawniki #primary-sidebar .widget_sp_image .arve-wrapper,
+.trawniki #primary-sidebar .widget_text .arve-wrapper {
+  width: 100%;
+  border: 1px solid #2e6c7a;
+}
+.trawniki #primary-sidebar .widget_text:first-child {
+  margin-right: 1%;
+}
+.trawniki #primary-sidebar .widget_text:last-child {
+  margin-left: 1%;
+}
+/*--------------------------------------------------------------
+6.1 - PODSTRONA / SKLEP / STRONA PRODUKTOWA
+--------------------------------------------------------------*/
+body.single-product #content-woocommerce {
+  /*--------------------------------------------------------------
+			SCIEŻKA
+			--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+			PRODUKT
+			--------------------------------------------------------------*/
+}
+body.single-product #content-woocommerce nav.woocommerce-breadcrumb {
+  margin: 0 0 3em;
+}
+body.single-product #content-woocommerce .product {
+  /*--------------------------------------------------------------
+			PRODUKT / PROMOCJA
+			--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+			PRODUKT / GALERIA ZDJĘĆ
+			--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+			PRODUKT / OPIS PRODUKTU
+			--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+			PRODUKT / ZAKŁADKI Z OPISAMI
+			--------------------------------------------------------------*/
+}
+body.single-product #content-woocommerce .product .woocommerce-product-gallery .woocommerce-product-gallery__wrapper {
+  text-align: center;
+}
+body.single-product #content-woocommerce .product .woocommerce-product-gallery .woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image:first-child {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3.5em;
+}
+body.single-product #content-woocommerce .product .woocommerce-product-gallery .woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image:nth-child(n+2) {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+body.single-product #content-woocommerce .product .summary {
+  color: #2e6c7a;
+  /*--------------------------------------------------------------
+			PRODUKT / OPIS PRODUKTU / TAGI ITP
+			--------------------------------------------------------------*/
+  /*p.price:hover del:before {
+				 	content: "Wcześniej :";
+				 }	*/
+  /*--------------------------------------------------------------
+			PRODUKT / OPIS PRODUKTU / ILOŚĆ + PRZYCISK ZAMOWIENIE
+			--------------------------------------------------------------*/
+}
+body.single-product #content-woocommerce .product .summary .product_meta {
+  font-size: .8em;
+  font-weight: 400;
+  margin-bottom: 1.5em;
+}
+body.single-product #content-woocommerce .product .summary h1.product_title {
+  margin-bottom: .5em;
+}
+body.single-product #content-woocommerce .product .summary .woocommerce-product-details__short-description p {
+  font-size: 1em;
+  line-height: 1.6em;
+  min-height: 200px;
+}
+body.single-product #content-woocommerce .product .summary p.price {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #728f01;
+  font-weight: 600;
+}
+body.single-product #content-woocommerce .product .summary p.price del {
+  visibility: hidden;
+}
+body.single-product #content-woocommerce .product .summary p.price del:before {
+  content: "Wcześniej : ";
+}
+body.single-product #content-woocommerce .product .summary p.price ins {
+  position: relative;
+  left: -280px;
+}
+body.single-product #content-woocommerce .product .summary p.price:hover del {
+  visibility: visible;
+  position: relative;
+  left: 150px;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+}
+body.single-product #content-woocommerce .product .summary p.price:before {
+  content: "Cena: ";
+}
+body.single-product #content-woocommerce .product .summary table.variations td.label label {
+  font-weight: 400;
+  font-size: 1.5em;
+  margin-top: 5px;
+}
+body.single-product #content-woocommerce .product .summary table.variations td.value select#gramatura {
+  max-width: 100px;
+}
+body.single-product #content-woocommerce .product .summary table.variations td.value a.reset_variations {
+  background: #9BB925;
+  padding: 8px;
+  color: #fff;
+  border-radius: 0px;
+}
+body.single-product #content-woocommerce .product .summary table.variations td.value a.reset_variations:hover {
+  background: #2E6C7A;
+  color: #fff;
+}
+body.single-product #content-woocommerce .product .summary .single_variation_wrap .single_variation .woocommerce-variation-price .price .woocommerce-Price-amount {
+  /*color: #fff;
+							font-size: 1.3em;
+							padding: 10px;
+							display: block;
+							max-width: 361px;
+							text-align: center;
+							background: #81afb9;
+							margin-bottom: 10px;
+							border-bottom: 2px solid #2e6c7a;*/
+  color: #2e6c7a;
+  font-size: 1.3em;
+  padding: 10px;
+  display: block;
+  max-width: 361px;
+  text-align: center;
+  background: #E6E6E6;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #2e6c7a;
+}
+body.single-product #content-woocommerce .product .summary .single_variation_wrap .single_variation .woocommerce-variation-price .price .woocommerce-Price-amount:before {
+  content: "Do zapłaty : ";
+}
+body.single-product #content-woocommerce .product .summary form.cart .quantity input {
+  width: 100px;
+  height: 2.2em;
+  font-size: 1.8em;
+  border: 0px;
+  background-color: #e6e6e6;
+  box-shadow: none;
+  color: #505050;
+}
+body.single-product #content-woocommerce .product .summary button.single_add_to_cart_button {
+  background-color: #2e6c7a;
+  border-radius: 0px;
+  height: 2.2em;
+  font-size: 1.8em;
+  margin-left: 30px;
+  min-width: 9em;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+body.single-product #content-woocommerce .product .summary button.single_add_to_cart_button span.grafika-zakup:before {
+  content: "\f07a";
+  font-family: FontAwesome;
+  padding: 0px 10px;
+}
+body.single-product #content-woocommerce .product .summary button.single_add_to_cart_button:hover {
+  background-color: #728f01;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs {
+  margin-bottom: 50px;
+  /*--------------------------------------------------------------
+			PRODUKT / ZAKŁADKI Z OPISAMI / PANELE
+			--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+			PRODUKT / ZAKŁADKI Z OPISAMI / OPISY
+			--------------------------------------------------------------*/
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs ul.wc-tabs {
+  margin: 0px;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs ul.wc-tabs li {
+  border: 0px;
+  border-radius: 0px;
+  background-color: #fff;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs ul.wc-tabs li a {
+  color: #2e6c7a;
+  text-transform: uppercase;
+  padding: 10px 25px;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs ul.wc-tabs li:before {
+  box-shadow: none;
+  border: none;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs ul.wc-tabs li:after {
+  box-shadow: none;
+  border: none;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs ul.wc-tabs li.active {
+  background-color: #e6e6e6;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs ul.wc-tabs li.active a {
+  color: #2e6c7a;
+  text-transform: uppercase;
+  padding: 10px 25px;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs ul.wc-tabs li:hover {
+  background-color: #e6e6e6;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs ul.wc-tabs:before {
+  border-bottom: 1px solid #2e6c7a;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs .woocommerce-Tabs-panel {
+  float: left;
+  width: 100%;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel {
+  margin: 0px;
+  padding: 10px 50px;
+  background-color: #e6e6e6;
+  color: #2e6c7a;
+  border-bottom: 1px solid #2e6c7a;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel h2 {
+  display: none;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel p {
+  font-size: 1em;
+  line-height: 1.8em;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel table#nawoz-granulowany-storczyk,
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel table#nawoz-granulowany-roze {
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  border-bottom: 1px solid #2E6C7A;
+  text-align: center;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel table#nawozy-granulowany-storczyk > tbody > tr > td,
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel table#nawozy-granulowany-roze > tbody > tr > td {
+  text-align: center;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel table#nawoz-granulowany-storczyk > caption + thead > tr:first-child > th,
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel table#nawoz-granulowany-roze > caption + thead > tr:first-child > th {
+  vertical-align: middle;
+  text-align: center;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel table#nawoz-granulowany-storczyk > caption + thead > tr:first-child > th#nawoz-granulowany-storczyk_row_0col_0 {
+  width: 16%;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel table#nawoz-granulowany-storczyk > caption + thead > tr:first-child > th#nawoz-granulowany-storczyk_row_0col_1,
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel table#nawoz-granulowany-storczyk > caption + thead > tr:first-child > th#nawoz-granulowany-storczyk_row_0col_2,
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel table#nawoz-granulowany-storczyk > caption + thead > tr:first-child > th#nawoz-granulowany-storczyk_row_0col_3 {
+  width: 28%;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel .woocommerce-Reviews ol.commentlist li .comment-text {
+  border: none !important;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel .woocommerce-Reviews ol.commentlist li .comment-text img.avatar {
+  width: 60px !important;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel .woocommerce-Reviews ol.commentlist li .comment-text .comment-text {
+  border: none !important;
+  padding: 1em 3em 0 !important;
+}
+body.single-product #content-woocommerce .product .woocommerce-tabs .panel .woocommerce-Reviews ol.commentlist li .comment-text .meta {
+  padding: 15px;
+  color: #2E6C7A !important;
+}
+/*--------------------------------------------------------------
+7.1 - PODSTRONA / Moje Konto
+--------------------------------------------------------------*/
+body.woocommerce-account .woocommerce {
+  /*--------------------------------------------------------------
+PODSTRONA / Moje Konto / Ustawienia / Lewa kolumna nawigacyjna
+--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+PODSTRONA / Moje Konto / Ustawienia / Box z danymi
+--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+PODSTRONA / Moje Konto / Ustawienia / Box z danymi / Komunikaty
+--------------------------------------------------------------*/
+}
+body.woocommerce-account .woocommerce #customer_login {
+  /*--------------------------------------------------------------
+PODSTRONA / Moje Konto / Nagłówek 1 i 2
+--------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+PODSTRONA / Moje Konto / Logowanie & Rejestracja / Treść Boxów
+--------------------------------------------------------------*/
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 h2 {
+  display: table;
+  white-space: nowrap;
+  font-size: 1.65em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #2e6c7a;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  /*margin-left: -60px;*/
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 h2:before,
+body.woocommerce-account .woocommerce #customer_login .u-column1 h2:after {
+  border-top: 2px solid #2e6c7a;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.5em;
+  width: 150px;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 h2:before {
+  right: 60px;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 h2:after {
+  left: 50px;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column2 h2 {
+  display: table;
+  white-space: nowrap;
+  font-size: 1.65em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #2e6c7a;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  /*margin-left: -60px;*/
+}
+body.woocommerce-account .woocommerce #customer_login .u-column2 h2:before,
+body.woocommerce-account .woocommerce #customer_login .u-column2 h2:after {
+  border-top: 2px solid #2e6c7a;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.5em;
+  width: 130px;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column2 h2:before {
+  right: 60px;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column2 h2:after {
+  left: 50px;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 .woocomerce-form,
+body.woocommerce-account .woocommerce #customer_login .u-column2 .register {
+  border: 1px solid #2e6c7a;
+  padding: 20px;
+  margin: 2em 0;
+  text-align: left;
+  border-radius: 0px;
+  min-height: 300px;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 .woocomerce-form input.button,
+body.woocommerce-account .woocommerce #customer_login .u-column2 .register input.button {
+  background-color: #2e6c7a;
+  border-radius: 0px;
+  color: #fff;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 .woocomerce-form input.woocommerce-Input,
+body.woocommerce-account .woocommerce #customer_login .u-column2 .register input.woocommerce-Input {
+  box-shadow: none;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 .woocomerce-form input.button:hover,
+body.woocommerce-account .woocommerce #customer_login .u-column2 .register input.button:hover {
+  background-color: #9BB925;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 .woocomerce-form .woocommerce-password-strength.short,
+body.woocommerce-account .woocommerce #customer_login .u-column2 .register .woocommerce-password-strength.short {
+  background-color: #98be04;
+  border-color: #2e6c7a;
+  color: #fff;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 .woocomerce-form .woocommerce-password-strength.bad,
+body.woocommerce-account .woocommerce #customer_login .u-column2 .register .woocommerce-password-strength.bad {
+  background-color: #8aac04;
+  border-color: #2e6c7a;
+  color: #fff;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 .woocomerce-form .woocommerce-password-strength.good,
+body.woocommerce-account .woocommerce #customer_login .u-column2 .register .woocommerce-password-strength.good {
+  background-color: #83a304;
+  border-color: #7c9b03;
+  color: #fff;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 .woocomerce-form .woocommerce-password-strength.strong,
+body.woocommerce-account .woocommerce #customer_login .u-column2 .register .woocommerce-password-strength.strong {
+  background-color: #728f01;
+  border-color: #2e6c7a;
+  color: #fff;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 .woocomerce-form p.woocommerce-LostPassword a,
+body.woocommerce-account .woocommerce #customer_login .u-column2 .register p.woocommerce-LostPassword a {
+  color: #2e6c7a;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 .woocomerce-form p.woocommerce-LostPassword a:hover,
+body.woocommerce-account .woocommerce #customer_login .u-column2 .register p.woocommerce-LostPassword a:hover {
+  color: #9BB925;
+  text-decoration: none;
+}
+body.woocommerce-account .woocommerce #customer_login .u-column1 .woocomerce-form:hover,
+body.woocommerce-account .woocommerce #customer_login .u-column2 .register:hover {
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #2e6c7a;
+  background-color: #e6e6e6;
+  color: #2e6c7a;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+body.woocommerce-account .woocommerce nav.woocommerce-MyAccount-navigation {
+  padding: 20px 0px;
+  background: #e6e6e6;
+  margin: 20px 0px;
+  border-bottom: 1px solid #2e6c7a;
+}
+body.woocommerce-account .woocommerce nav.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--downloads {
+  display: none;
+}
+body.woocommerce-account .woocommerce nav.woocommerce-MyAccount-navigation ul li {
+  border-bottom: 1px solid #fff;
+  max-width: 85%;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+body.woocommerce-account .woocommerce nav.woocommerce-MyAccount-navigation ul li a {
+  color: #2e6c7a;
+  font-size: 1.2em;
+}
+body.woocommerce-account .woocommerce nav.woocommerce-MyAccount-navigation ul li a:hover {
+  color: #728f01;
+  text-decoration: none;
+}
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-content {
+  padding: 20px 40px;
+  background: #e6e6e6;
+  margin: 20px 0px;
+  border-bottom: 1px solid #2e6c7a;
+  min-height: 281px;
+  /*--------------------------------------------------------------
+PODSTRONA / Moje Konto / Ustawienia / Box z danymi / Komunikaty
+--------------------------------------------------------------*/
+}
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-content p {
+  color: #2e6c7a;
+  line-height: 1.8em;
+  font-size: 1.1em;
+}
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-content p a {
+  color: #2e6c7a;
+  text-decoration: none;
+  font-weight: 600;
+}
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-content p a:hover {
+  color: #728f01;
+  text-decoration: none;
+}
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses .u-column1 .woocommerce-Address-title h3,
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses .u-column2 .woocommerce-Address-title h3 {
+  color: #2e6c7a;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses .u-column1 .woocommerce-Address-title a.edit,
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses .u-column2 .woocommerce-Address-title a.edit {
+  display: block;
+  padding: 10px 20px;
+  background: #2e6c7a;
+  margin-top: 10px;
+  color: #fff;
+  -webkit-transition: background-color 0.8s ease-out;
+  -moz-transition: background-color 0.8s ease-out;
+  -o-transition: background-color 0.8s ease-out;
+  transition: background-color 0.8s ease-out;
+}
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses .u-column1 .woocommerce-Address-title a.edit:hover,
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses .u-column2 .woocommerce-Address-title a.edit:hover {
+  background-color: #728f01;
+  text-decoration: none;
+}
+body.woocommerce-account .woocommerce .woocommerce-error {
+  border-top-color: #728f01;
+  background-color: #2e6c7a;
+  color: #fff;
+  margin-top: 20px;
+}
+body.woocommerce-account .woocommerce .woocommerce-error:before {
+  color: #fff;
+}
+body.woocommerce-account .woocommerce .woocommerce-message {
+  border-top-color: #728f01;
+  background-color: #f6f6f6;
+  color: #2e6c7a;
+}
+body.woocommerce-account .woocommerce .woocommerce-message a,
+body.woocommerce-account .woocommerce .woocommerce-message a.wc-forward {
+  background-color: #2E6C7A;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+body.woocommerce-account .woocommerce .woocommerce-message a:hover,
+body.woocommerce-account .woocommerce .woocommerce-message a.wc-forward:hover {
+  background-color: #fff;
+  color: #2E6C7A;
+  text-decoration: none;
+}
+body.woocommerce-account .woocommerce .woocommerce-message a.woocommerce-Button,
+body.woocommerce-account .woocommerce .woocommerce-message a.button {
+  background-color: #2e6c7a;
+  border-radius: 0px;
+  color: #fff;
+  -webkit-transition: background-color 0.8s ease-out;
+  -moz-transition: background-color 0.8s ease-out;
+  -o-transition: background-color 0.8s ease-out;
+  transition: background-color 0.8s ease-out;
+}
+body.woocommerce-account .woocommerce .woocommerce-message a.woocommerce-Button:hover,
+body.woocommerce-account .woocommerce .woocommerce-message a.button:hover {
+  background-color: #728f01;
+}
+body.woocommerce-account .woocommerce .woocommerce-info::before,
+body.woocommerce-account .woocommerce .woocommerce-message::before {
+  color: #2e6c7a;
+}
+/*--------------------------------------------------------------
+PODSTRONA / Moje Konto / Lista zamówień + Opis zamówień
+--------------------------------------------------------------*/
+body.woocommerce-orders table.woocommerce-orders-table {
+  border: 1px solid #2E6C7A;
+  border-radius: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+body.woocommerce-orders table.woocommerce-orders-table thead tr th {
+  background: #2E6C7A;
+  border-bottom: 2px solid #2E6C7A;
+  text-align: center;
+  color: #fff;
+}
+body.woocommerce-orders table.woocommerce-orders-table tbody tr td {
+  background: #fff;
+  text-align: center;
+}
+body.woocommerce-orders table.woocommerce-orders-table tbody tr td a {
+  background: #2E6C7A;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+}
+body.woocommerce-orders table.woocommerce-orders-table tbody tr td a:hover {
+  text-decoration: none;
+  background: #E6E6E6;
+  color: #2E6C7A;
+}
+body.woocommerce-view-order .woocommerce-MyAccount-content {
+  font-family: 'Open Sans', sans-serif;
+}
+body.woocommerce-view-order .woocommerce-MyAccount-content p .order-number,
+body.woocommerce-view-order .woocommerce-MyAccount-content p .order-date,
+body.woocommerce-view-order .woocommerce-MyAccount-content p .order-status {
+  background: #2E6C7A;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+body.woocommerce-view-order .woocommerce-MyAccount-content table.woocommerce-table--order-details,
+body.woocommerce-view-order .woocommerce-MyAccount-content table.woocommerce-table--customer-details {
+  border: 1px;
+  /* solid #2E6C7A*/
+  border-left: 1px solid #E6E6E6;
+  border-right: 1px solid #E6E6E6;
+  border-bottom: 1px solid #2E6C7A;
+  border-top: 1px solid #2E6C7A;
+  border-radius: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+body.woocommerce-view-order .woocommerce-MyAccount-content table.woocommerce-table--order-details thead tr th,
+body.woocommerce-view-order .woocommerce-MyAccount-content table.woocommerce-table--customer-details thead tr th {
+  background: #2E6C7A;
+  border-bottom: 2px solid #2E6C7A;
+  text-align: center;
+  color: #fff;
+}
+body.woocommerce-view-order .woocommerce-MyAccount-content table.woocommerce-table--order-details tbody tr td,
+body.woocommerce-view-order .woocommerce-MyAccount-content table.woocommerce-table--customer-details tbody tr td {
+  background: #fff;
+  text-align: center;
+  /*a {
+				background: #2E6C7A;
+				padding: 5px 10px;
+				color: #fff;
+				border-radius: 5px;
+			}
+
+			a:hover {
+				text-decoration: none;
+				background: #E6E6E6;
+				color: #2E6C7A;
+			}*/
+}
+body.woocommerce-view-order .woocommerce-MyAccount-content table.woocommerce-table--order-details tbody tr th,
+body.woocommerce-view-order .woocommerce-MyAccount-content table.woocommerce-table--customer-details tbody tr th {
+  text-align: center;
+  background: #fbfbfb;
+}
+body.woocommerce-view-order .woocommerce-MyAccount-content table.woocommerce-table--order-details tfoot tr th,
+body.woocommerce-view-order .woocommerce-MyAccount-content table.woocommerce-table--customer-details tfoot tr th {
+  text-align: center;
+  background: #fbfbfb;
+}
+body.woocommerce-view-order .woocommerce-MyAccount-content table.woocommerce-table--order-details tfoot tr td,
+body.woocommerce-view-order .woocommerce-MyAccount-content table.woocommerce-table--customer-details tfoot tr td {
+  text-align: center;
+  background: #f4f5f5;
+}
+body.woocommerce-view-order .woocommerce-MyAccount-content .woocommerce-columns--addresses .woocommerce-column {
+  background: #fbfbfb;
+  padding: 5px 50px;
+  border-bottom: 1px solid #2E6C7A;
+  border-top: 1px solid #2E6C7A;
+}
+/*--------------------------------------------------------------
+PODSTRONA / Moje Konto / Ustawienia / Edycja Danych Adresowych
+--------------------------------------------------------------*/
+body.woocommerce-edit-address .woocommerce-MyAccount-content form h3,
+body.woocommerce-edit-account .woocommerce-MyAccount-content form h3 {
+  color: #2e6c7a;
+}
+body.woocommerce-edit-address .woocommerce-MyAccount-content form input.input-text,
+body.woocommerce-edit-account .woocommerce-MyAccount-content form input.input-text {
+  box-shadow: none;
+}
+body.woocommerce-edit-address .woocommerce-MyAccount-content form input.button,
+body.woocommerce-edit-account .woocommerce-MyAccount-content form input.button {
+  background-color: #2e6c7a;
+  border-radius: 0px;
+  color: #ffffff;
+}
+body.woocommerce-edit-address .woocommerce-MyAccount-content form input.button:hover,
+body.woocommerce-edit-account .woocommerce-MyAccount-content form input.button:hover {
+  background-color: #728f01;
+}
+/*--------------------------------------------------------------
+PODSTRONA / Koszyk
+--------------------------------------------------------------*/
+body.woocommerce-cart .woocommerce,
+body.woocommerce-checkout .woocommerce {
+  margin-top: 20px;
+  /*--------------------------------------------------------------
+PODSTRONA / Koszyk / Tabela podsumowanie
+--------------------------------------------------------------*/
+}
+body.woocommerce-cart .woocommerce .woocommerce-order-details h2,
+body.woocommerce-checkout .woocommerce .woocommerce-order-details h2 {
+  color: #2e6c7a;
+}
+body.woocommerce-cart .woocommerce .woocommerce-columns .woocommerce-column,
+body.woocommerce-checkout .woocommerce .woocommerce-columns .woocommerce-column {
+  background: #F5F5F5;
+  padding: 0px 50px;
+}
+body.woocommerce-cart .woocommerce .woocommerce-columns .woocommerce-column h3.woocommerce-column__title,
+body.woocommerce-checkout .woocommerce .woocommerce-columns .woocommerce-column h3.woocommerce-column__title {
+  color: #2e6c7a;
+}
+body.woocommerce-cart .woocommerce table.woocommerce-table,
+body.woocommerce-checkout .woocommerce table.woocommerce-table {
+  border-radius: 0px;
+}
+body.woocommerce-cart .woocommerce table.woocommerce-table thead tr,
+body.woocommerce-checkout .woocommerce table.woocommerce-table thead tr {
+  background-color: #e6e6e6;
+}
+body.woocommerce-cart .woocommerce table.woocommerce-table thead tr th,
+body.woocommerce-checkout .woocommerce table.woocommerce-table thead tr th {
+  font-weight: 600;
+  font-size: 1.3em;
+  border-bottom: 2px solid #2e6c7a;
+  color: #2e6c7a;
+  text-align: center;
+}
+body.woocommerce-cart .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td,
+body.woocommerce-checkout .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td {
+  text-align: center;
+}
+body.woocommerce-cart .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td a.remove,
+body.woocommerce-checkout .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td a.remove {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0;
+  color: #2e6c7a !important;
+}
+body.woocommerce-cart .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td a.remove:hover,
+body.woocommerce-checkout .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td a.remove:hover {
+  background-color: #728f01;
+  color: #fff !important;
+}
+body.woocommerce-cart .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td.product-thumbnail a img,
+body.woocommerce-checkout .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td.product-thumbnail a img {
+  width: 100px;
+}
+body.woocommerce-cart .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td.product-name a,
+body.woocommerce-checkout .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td.product-name a,
+body.woocommerce-cart .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td.product-price .woocommerce-Price-amount,
+body.woocommerce-checkout .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td.product-price .woocommerce-Price-amount {
+  color: #2e6c7a;
+  font-size: 1.2em;
+}
+body.woocommerce-cart .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td.product-name a:hover,
+body.woocommerce-checkout .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td.product-name a:hover {
+  color: #728f01;
+  text-decoration: none;
+}
+body.woocommerce-cart .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td.product-quantity .quantity input.input-text,
+body.woocommerce-checkout .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td.product-quantity .quantity input.input-text {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  font-size: 1.2em;
+  color: #2e6c7a;
+}
+body.woocommerce-cart .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td.product-subtotal .woocommerce-Price-amount,
+body.woocommerce-checkout .woocommerce table.woocommerce-table tbody tr.woocommerce-cart-form__cart-item td.product-subtotal .woocommerce-Price-amount {
+  color: #2e6c7a;
+  font-size: 1.2em;
+}
+body.woocommerce-cart .woocommerce table.woocommerce-table tbody tr td.actions input.button,
+body.woocommerce-checkout .woocommerce table.woocommerce-table tbody tr td.actions input.button {
+  background-color: #2e6c7a;
+  border-radius: 0px;
+  color: #fff;
+}
+body.woocommerce-cart .woocommerce table.woocommerce-table tbody tr td.actions input.button:hover,
+body.woocommerce-checkout .woocommerce table.woocommerce-table tbody tr td.actions input.button:hover {
+  background-color: #728f01;
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form {
+  /*--------------------------------------------------------------
+PODSTRONA / Koszyk / Tabela z produktami
+--------------------------------------------------------------*/
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table {
+  border-radius: 0px;
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table thead tr,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table thead tr {
+  background-color: #e6e6e6;
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table thead tr th,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table thead tr th {
+  font-weight: 600;
+  font-size: 1.3em;
+  border-bottom: 2px solid #2e6c7a;
+  color: #2e6c7a;
+  text-align: center;
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td {
+  text-align: center;
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td a.remove,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td a.remove {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0;
+  color: #2e6c7a !important;
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td a.remove:hover,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td a.remove:hover {
+  background-color: #728f01;
+  color: #fff !important;
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-thumbnail a img,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-thumbnail a img {
+  width: 100px;
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-name a,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-name a,
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-price .woocommerce-Price-amount,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-price .woocommerce-Price-amount {
+  color: #2e6c7a;
+  font-size: 1.2em;
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-name a:hover,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-name a:hover {
+  color: #728f01;
+  text-decoration: none;
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-quantity .quantity input.input-text,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-quantity .quantity input.input-text {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  font-size: 1.2em;
+  color: #2e6c7a;
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-subtotal .woocommerce-Price-amount,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table tbody tr.woocommerce-cart-form__cart-item td.product-subtotal .woocommerce-Price-amount {
+  color: #2e6c7a;
+  font-size: 1.2em;
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions input.button,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions input.button {
+  background-color: #2e6c7a;
+  border-radius: 0px;
+  color: #fff;
+}
+body.woocommerce-cart .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions input.button:hover,
+body.woocommerce-checkout .woocommerce form.woocommerce-cart-form table.shop_table tbody tr td.actions input.button:hover {
+  background-color: #728f01;
+}
+body.woocommerce-cart .woocommerce .cart-collaterals .cart_totals h2,
+body.woocommerce-checkout .woocommerce .cart-collaterals .cart_totals h2 {
+  color: #2e6c7a;
+}
+body.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table.shop_table,
+body.woocommerce-checkout .woocommerce .cart-collaterals .cart_totals table.shop_table {
+  border-radius: 0px;
+}
+body.woocommerce-cart .woocommerce .cart-collaterals .cart_totals a.shipping-calculator-button,
+body.woocommerce-checkout .woocommerce .cart-collaterals .cart_totals a.shipping-calculator-button {
+  padding: 5px 10px;
+  background-color: #728f01;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  margin-top: 5px;
+  display: block;
+  text-align: center;
+}
+body.woocommerce-cart .woocommerce .cart-collaterals .cart_totals a.shipping-calculator-button:hover,
+body.woocommerce-checkout .woocommerce .cart-collaterals .cart_totals a.shipping-calculator-button:hover {
+  background-color: #2e6c7a;
+  text-decoration: none;
+}
+body.woocommerce-cart .woocommerce .cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button,
+body.woocommerce-checkout .woocommerce .cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button {
+  background-color: #728f01;
+  border-radius: 0px;
+}
+body.woocommerce-cart .woocommerce .cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button:hover,
+body.woocommerce-checkout .woocommerce .cart-collaterals .cart_totals .wc-proceed-to-checkout a.checkout-button:hover {
+  background-color: #2e6c7a;
+}
+/*--------------------------------------------------------------
+PODSTRONA / Koszyk / Zamówienie
+--------------------------------------------------------------*/
+body.woocommerce-checkout .woocommerce .woocommerce-info:before {
+  color: #2e6c7a;
+}
+body.woocommerce-checkout .woocommerce .woocommerce-info {
+  border-top-color: #728f01;
+  background-color: #e6e6e6;
+  color: #2e6c7a;
+  margin-top: 15px;
+}
+body.woocommerce-checkout .woocommerce .woocommerce-info a {
+  color: #2e6c7a;
+}
+body.woocommerce-checkout .woocommerce .woocommerce-info a:hover {
+  color: #728f01;
+}
+body.woocommerce-checkout .woocommerce form.checkout #customer_details .col-1,
+body.woocommerce-checkout .woocommerce form.checkout #customer_details .col-2 {
+  background-color: #e6e6e6;
+  padding: 5px 20px;
+}
+body.woocommerce-checkout .woocommerce form.checkout #customer_details .col-1 input,
+body.woocommerce-checkout .woocommerce form.checkout #customer_details .col-2 input {
+  border: 0px;
+  box-shadow: none;
+}
+body.woocommerce-checkout .woocommerce form.checkout #customer_details h3 {
+  color: #2e6c7a;
+}
+body.woocommerce-checkout .woocommerce form.checkout h3.order_review_heading {
+  color: #2e6c7a;
+}
+body.woocommerce-checkout .woocommerce form.checkout table.shop_table {
+  border-radius: 0px;
+}
+body.woocommerce-checkout .woocommerce form.checkout table.shop_table thead tr {
+  background-color: #e6e6e6;
+}
+body.woocommerce-checkout .woocommerce form.checkout table.shop_table thead tr th {
+  font-weight: 600;
+  font-size: 1.3em;
+  border-bottom: 2px solid #2e6c7a;
+  color: #2e6c7a;
+  text-align: center;
+}
+body.woocommerce-checkout .woocommerce form.checkout table.shop_table tbody tr td,
+body.woocommerce-checkout .woocommerce form.checkout table.shop_table tfoot tr td {
+  text-align: center;
+  color: #2e6c7a;
+}
+body.woocommerce-checkout .woocommerce form.checkout table.shop_table tbody tr th,
+body.woocommerce-checkout .woocommerce form.checkout table.shop_table tfoot tr th {
+  text-align: center;
+  color: #2e6c7a;
+}
+body.woocommerce-checkout .woocommerce form.checkout #payment {
+  border-radius: 0px;
+}
+body.woocommerce-checkout .woocommerce form.checkout #payment .payment_box {
+  background-color: #2e6c7a;
+  color: #fff;
+}
+body.woocommerce-checkout .woocommerce form.checkout #payment .payment_box:before {
+  border: 1em solid #2e6c7a;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+body.woocommerce-checkout .woocommerce form.checkout #payment .button {
+  border-radius: 0px;
+  background-color: #2e6c7a;
+  color: #fff;
+}
+body.woocommerce-checkout .woocommerce form.checkout #payment .button:hover {
+  background-color: #728f01;
+}
+.woocommerce-checkout #payment div.payment_box p {
+  color: #fff !important;
+}
+.woocommerce-order p.woocommerce-notice {
+  background-color: #2E6C7A;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #fff !important;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.woocommerce-order ul.woocommerce-order-overview {
+  margin: 0 auto 3em;
+  list-style: none;
+  font-size: 1.2em;
+  display: block;
+}
+.woocommerce-order h2,
+.woocommerce-order h3.woocommerce-column__title {
+  background-color: #2E6C7A;
+  padding: 15px 15px;
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.woocommerce-order address {
+  padding: 10px 30px;
+  background-color: #ebebeb;
+  /*border: 1px solid #a1a1a1;*/
+}
+/*--------------------------------------------------------------
+Konto użytkownika / zalogowany i niezalogowany
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+PODSTRONA / Kontakt
+--------------------------------------------------------------*/
+body.page-id-16 .wpcf7 form.wpcf7-form label {
+  min-width: 500px;
+}
+body.page-id-16 .wpcf7 form.wpcf7-form label span input[type="text"],
+body.page-id-16 .wpcf7 form.wpcf7-form label span input[type="email"],
+body.page-id-16 .wpcf7 form.wpcf7-form label span textarea {
+  box-shadow: none;
+  transition: none;
+}
+body.page-id-16 .wpcf7 form.wpcf7-form label span input[type="text"]:hover,
+body.page-id-16 .wpcf7 form.wpcf7-form label span input[type="email"]:hover,
+body.page-id-16 .wpcf7 form.wpcf7-form label span textarea:hover {
+  border: 1px solid #2E6C7A;
+  background: #9BB927;
+  color: #fff;
+}
+body.page-id-16 .wpcf7 form.wpcf7-form input[type="submit"] {
+  background-color: #2E6C7A;
+  border-color: #2E6C7A;
+  color: #fff;
+}
+body.page-id-16 .wpcf7 form.wpcf7-form input[type="submit"]:hover {
+  background-color: #9BB927;
+  border-color: #9BB927;
+  color: #2E6C7A;
+}
+/*--------------------------------------------------------------
+Cookie Alert
+--------------------------------------------------------------*/
+#catapult-cookie-bar {
+  border-top: 2px solid #9BB927;
+  font-family: 'Open Sans', sans-serif;
+}
+/*--------------------------------------------------------------
+BreadCrump
+--------------------------------------------------------------*/
+body #wrapper #content .site-main .breadcrumb-list span.breadcrumb {
+  background-color: #9BB927;
+}
+body #wrapper #content .site-main .breadcrumb-list span.breadcrumb a {
+  color: #fff;
+}
+body #wrapper #content .site-main .breadcrumb-list span.breadcrumb a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+/*--------------------------------------------------------------
+5.9 - STRONY / POSTRONY + RWD
+--------------------------------------------------------------*/
+body.default #wrapper #content .site-main .breadcrumb-list {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+body.default #wrapper #content .site-main .breadcrumb-list .breadcrumb-current {
+  color: #9bb925;
+}
+body.default #wrapper #content .site-main .page .post-entry p {
+  color: #2e6c7a;
+  font-weight: 300;
+  line-height: 1.6em;
+  text-align: justify;
+}
+@media only screen and (max-width: 768px) {
+  body.default #wrapper #content .site-main .post-entry p .alignleft {
+    width: 100%;
+  }
+}
+/*--------------------------------------------------------------
+4.1 - RWD / Header
+--------------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+  /*
+	#header {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}*/
+  #mobile-nav-button {
+    padding: 1px 10px;
+  }
+  #mobile-current-item {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 1px #969696;
+    top: 5px;
+  }
+  #header {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  #header .container .logo-top {
+    top: 55px;
+  }
+  /*--------------------------------------------------------------
+4.1.2 - RWD / Header / Wyszukiwarka
+--------------------------------------------------------------*/
+  .wyszukiwarka {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .koszyk {
+    display: none;
+  }
+  .aws-search-result {
+    width: 400px !important;
+  }
+  .wyszukiwarka .aws-container .aws-search-field {
+    background: #9bb925;
+  }
+  .wyszukiwarka button.zamknij {
+    background-color: #9bb925;
+    font-size: 1.05em;
+  }
+  #main-menu-container .main-nav .menu-item-180 {
+    display: none;
+  }
+  /*--------------------------------------------------------------
+4.2 - RWD / Menu Top
+--------------------------------------------------------------*/
+  #top-menu-container .top-menu {
+    float: none;
+  }
+  #top-menu-container .top-menu li {
+    text-align: center;
+    width: 30%;
+    margin-left: 0px;
+  }
+  #top-menu-container .top-menu li#menu-item-8 {
+    width: 40%;
+  }
+  /*--------------------------------------------------------------
+4.3 - RWD / Menu Pod Logo
+--------------------------------------------------------------*/
+  .pasek-dol {
+    position: relative;
+    height: 0px;
+    top: -1px;
+  }
+  #main-menu-container {
+    margin-top: 240px;
+    background-color: #2e6c7a;
+    padding: 0px;
+  }
+  #main-menu-container .main-nav {
+    /*.menu-item-has-children:not(:hover) ~ ul.sub-menu {
+    display: block;
+}*/
+    /*--------------------------------------------------------------
+4.3.1 - RWD / Menu Pod Logo / Submenu
+--------------------------------------------------------------*/
+  }
+  #main-menu-container .main-nav #menu-item-18 {
+    /*padding-right: 150px !important;*/
+  }
+  #main-menu-container .main-nav #menu-item-23 {
+    padding-left: 0px !important;
+  }
+  #main-menu-container .main-nav ul.menu {
+    padding-top: 41px;
+  }
+  #main-menu-container .main-nav ul {
+    padding-left: 0px;
+  }
+  #main-menu-container .main-nav ul li {
+    background-color: #37acc6;
+    color: #fff;
+  }
+  #main-menu-container .main-nav ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    padding: 13px;
+    margin: 0px;
+  }
+  #main-menu-container .main-nav ul li a:hover {
+    color: #fff;
+  }
+  #main-menu-container .main-nav .menu-item-has-children:hover ul.sub-menu {
+    display: block;
+    color: #fff;
+  }
+  #main-menu-container .main-nav ul li a:hover ~ ul.sub-menu {
+    color: #fff;
+    background-color: #37acc6;
+    display: block;
+    width: 100%;
+    min-width: 1349px;
+  }
+  #main-menu-container .main-nav ul.sub-menu {
+    display: none;
+    text-align: center;
+    text-transform: uppercase;
+    position: static;
+    top: 0px;
+    font-size: 10px;
+    -webkit-transition: height .2s;
+    -moz-transition: height .2s;
+    -o-transition: height .2s;
+    transition: height .2s;
+    width: 100%;
+    overflow: hidden;
+    line-height: 42px;
+    margin-left: 15px;
+    background: #37acc6;
+  }
+  #main-menu-container .main-nav ul.sub-menu li {
+    float: left;
+    display: block;
+  }
+  #main-menu-container .main-nav ul.sub-menu li a {
+    color: #fff;
+  }
+  #main-menu-container .main-nav ul.sub-menu li a:hover {
+    color: #fff;
+  }
+  #main-menu-container .main-nav ul li#menu-item-11:hover:before,
+  #main-menu-container .main-nav ul li#menu-item-18:hover:before,
+  #main-menu-container .main-nav ul li#menu-item-24:hover:before,
+  #main-menu-container .main-nav ul li#menu-item-180:hover:before {
+    display: none;
+  }
+  #main-menu-container .main-nav ul li#menu-item-180:before {
+    display: none;
+  }
+  #main-menu-container #mobile-nav-button {
+    background: #9BB927;
+  }
+  #main-menu-container #mobile-nav-button:hover:before {
+    color: #fff;
+  }
+  /*--------------------------------------------------------------
+4.4 - RWD / Oferta
+--------------------------------------------------------------*/
+  #wrapper .content-area .box-produkty .widget_sp_image {
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+  }
+  #wrapper .content-area .box-produkty #widget_sp_image-2 a img.aligncenter,
+  #wrapper .content-area .box-produkty #widget_sp_image-3 a img.aligncenter,
+  #wrapper .content-area .box-produkty #widget_sp_image-4 a img.aligncenter,
+  #wrapper .content-area .box-produkty #widget_sp_image-5 a img.aligncenter,
+  #wrapper .content-area .box-produkty #widget_sp_image-6 a img.aligncenter,
+  #wrapper .content-area .box-produkty #widget_sp_image-7 a img.aligncenter {
+    display: none;
+  }
+  #wrapper .content-area .box-produkty #widget_sp_image-2 a:before {
+    background-image: url(images/button-rosliny.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    display: inline-block;
+    width: 300px;
+    height: 155px;
+    content: "";
+    opacity: 1;
+  }
+  #wrapper .content-area .box-produkty #widget_sp_image-2 a:hover:before {
+    opacity: .7;
+  }
+  #wrapper .content-area .box-produkty #widget_sp_image-3 a:before {
+    background-image: url(images/button-rosliny-kwitnace.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    display: inline-block;
+    width: 300px;
+    height: 155px;
+    content: "";
+    opacity: 1;
+  }
+  #wrapper .content-area .box-produkty #widget_sp_image-3 a:hover:before {
+    opacity: .7;
+  }
+  #wrapper .content-area .box-produkty #widget_sp_image-4 a:before {
+    background-image: url(images/button-warzywa-owoce.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    display: inline-block;
+    width: 300px;
+    height: 155px;
+    content: "";
+    opacity: 1;
+  }
+  #wrapper .content-area .box-produkty #widget_sp_image-4 a:hover:before {
+    opacity: .7;
+  }
+  #wrapper .content-area .box-produkty #widget_sp_image-5 a:before {
+    background-image: url(images/button-iglaki.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    display: inline-block;
+    width: 300px;
+    height: 155px;
+    content: "";
+    opacity: 1;
+  }
+  #wrapper .content-area .box-produkty #widget_sp_image-5 a:hover:before {
+    opacity: .7;
+  }
+  #wrapper .content-area .box-produkty #widget_sp_image-6 a:before {
+    background-image: url(images/button-szkolkarska.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    display: inline-block;
+    width: 300px;
+    height: 155px;
+    content: "";
+    opacity: 1;
+  }
+  #wrapper .content-area .box-produkty #widget_sp_image-6 a:hover:before {
+    opacity: .7;
+  }
+  #wrapper .content-area .box-produkty #widget_sp_image-7 a:before {
+    background-image: url(images/button-trawniki.jpg);
+    background-size: 100% 100%;
+    background-position: center center;
+    display: inline-block;
+    width: 300px;
+    height: 155px;
+    content: "";
+    opacity: 1;
+  }
+  #wrapper .content-area .box-produkty #widget_sp_image-7 a:hover:before {
+    opacity: .7;
+  }
+  #wrapper .content-area .box-aktualnosci h2 {
+    padding-top: 40px;
+    font-size: 1.2em;
+  }
+  #wrapper .content-area .box-aktualnosci #sticky-posts-2 .upw-posts .category-aktualnosci {
+    width: 100%;
+  }
+  #wrapper .content-area .box-aktualnosci #sticky-posts-2 .upw-posts .category-aktualnosci:last-child {
+    margin-left: 0%;
+  }
+  #wrapper .content-area .box-aktualnosci #sticky-posts-2 .upw-posts article {
+    margin-bottom: 0em;
+    padding-bottom: 0em;
+  }
+  #wrapper .content-area .box-instagram .widget_sp_image {
+    width: 100%;
+  }
+  /*--------------------------------------------------------------
+4.5 - RWD Strona główna / Treść
+--------------------------------------------------------------*/
+  .site-main article {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .site-main article .entry-header {
+    display: none;
+  }
+  .site-main article .post-entry .entry-content p img.wp-image-64 {
+    display: none !important;
+  }
+  .site-main article .post-entry .entry-content a.art-wiecej {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  /*--------------------------------------------------------------
+4.6 - RWD Stopka / Ogólnie
+--------------------------------------------------------------*/
+  #footer {
+    margin-top: 0px;
+    padding: 0px;
+    background-image: none;
+    background-color: #014858;
+  }
+  #footer #footer-wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #footer #footer-widget .footer-widget:first-child {
+    width: 100%;
+  }
+  #footer #footer-widget .footer-widget {
+    width: 100%;
+  }
+  #footer #footer-widget #text-2 {
+    background-color: #2c6876;
+  }
+  #footer #footer-widget #text-2 .widget-title h3 {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  #footer #footer-widget #nav_menu-2,
+  #footer #footer-widget #nav_menu-3,
+  #footer #footer-widget #nav_menu-4 {
+    background-color: #014858;
+  }
+  #footer #footer-widget #nav_menu-2 .widget-title h3,
+  #footer #footer-widget #nav_menu-3 .widget-title h3,
+  #footer #footer-widget #nav_menu-4 .widget-title h3 {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  #footer #footer-widget #text-2 .textwidget,
+  #footer #footer-widget #nav_menu-2 .textwidget,
+  #footer #footer-widget #nav_menu-3 .textwidget,
+  #footer #footer-widget #nav_menu-4 .textwidget,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  #footer #footer-widget #text-2 .textwidget img#logo-stopka,
+  #footer #footer-widget #nav_menu-2 .textwidget img#logo-stopka,
+  #footer #footer-widget #nav_menu-3 .textwidget img#logo-stopka,
+  #footer #footer-widget #nav_menu-4 .textwidget img#logo-stopka,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container img#logo-stopka,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container img#logo-stopka,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container img#logo-stopka,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container img#logo-stopka,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container img#logo-stopka,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container img#logo-stopka,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container img#logo-stopka,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container img#logo-stopka,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container img#logo-stopka,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container img#logo-stopka,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container img#logo-stopka,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container img#logo-stopka {
+    display: none;
+  }
+  #footer #footer-widget #text-2 .textwidget ul li,
+  #footer #footer-widget #nav_menu-2 .textwidget ul li,
+  #footer #footer-widget #nav_menu-3 .textwidget ul li,
+  #footer #footer-widget #nav_menu-4 .textwidget ul li,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul li,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul li,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul li,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul li,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul li,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul li,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul li,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul li,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul li,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul li,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul li,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul li {
+    float: left;
+    word-break: keep-all;
+  }
+  #footer #footer-widget #text-2 .textwidget ul li a,
+  #footer #footer-widget #nav_menu-2 .textwidget ul li a,
+  #footer #footer-widget #nav_menu-3 .textwidget ul li a,
+  #footer #footer-widget #nav_menu-4 .textwidget ul li a,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul li a,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul li a,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul li a {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  #footer #footer-widget #text-2 .textwidget ul li:after,
+  #footer #footer-widget #nav_menu-2 .textwidget ul li:after,
+  #footer #footer-widget #nav_menu-3 .textwidget ul li:after,
+  #footer #footer-widget #nav_menu-4 .textwidget ul li:after,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul li:after,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul li:after,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul li:after,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul li:after,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul li:after,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul li:after,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul li:after,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul li:after,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul li:after,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul li:after,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul li:after,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul li:after {
+    content: "|";
+  }
+  #footer #footer-widget #text-2 .textwidget ul li:last-child:after,
+  #footer #footer-widget #nav_menu-2 .textwidget ul li:last-child:after,
+  #footer #footer-widget #nav_menu-3 .textwidget ul li:last-child:after,
+  #footer #footer-widget #nav_menu-4 .textwidget ul li:last-child:after,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul li:last-child:after,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul li:last-child:after,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul li:last-child:after,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul li:last-child:after,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul li:last-child:after,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul li:last-child:after,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul li:last-child:after,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul li:last-child:after,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul li:last-child:after,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul li:last-child:after,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul li:last-child:after,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul li:last-child:after {
+    content: "";
+  }
+  #footer #footer-widget #text-2 .textwidget p,
+  #footer #footer-widget #nav_menu-2 .textwidget p,
+  #footer #footer-widget #nav_menu-3 .textwidget p,
+  #footer #footer-widget #nav_menu-4 .textwidget p,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container p,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container p,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container p,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container p,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container p,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container p,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container p,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container p,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container p,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container p,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container p,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container p,
+  #footer #footer-widget #text-2 .textwidget ul,
+  #footer #footer-widget #nav_menu-2 .textwidget ul,
+  #footer #footer-widget #nav_menu-3 .textwidget ul,
+  #footer #footer-widget #nav_menu-4 .textwidget ul,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul,
+  #footer #footer-widget #text-2 .textwidget ul li,
+  #footer #footer-widget #nav_menu-2 .textwidget ul li,
+  #footer #footer-widget #nav_menu-3 .textwidget ul li,
+  #footer #footer-widget #nav_menu-4 .textwidget ul li,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul li,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul li,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul li,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul li,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul li,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul li,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul li,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul li,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul li,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul li,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul li,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul li {
+    color: #fff;
+    line-height: 1.6em;
+    overflow: auto;
+  }
+  #footer #footer-widget #text-2 .textwidget p a,
+  #footer #footer-widget #nav_menu-2 .textwidget p a,
+  #footer #footer-widget #nav_menu-3 .textwidget p a,
+  #footer #footer-widget #nav_menu-4 .textwidget p a,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container p a,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container p a,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container p a,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container p a,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container p a,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container p a,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container p a,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container p a,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container p a,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container p a,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container p a,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container p a,
+  #footer #footer-widget #text-2 .textwidget ul a,
+  #footer #footer-widget #nav_menu-2 .textwidget ul a,
+  #footer #footer-widget #nav_menu-3 .textwidget ul a,
+  #footer #footer-widget #nav_menu-4 .textwidget ul a,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul a,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul a,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul a,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul a,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul a,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul a,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul a,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul a,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul a,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul a,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul a,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul a,
+  #footer #footer-widget #text-2 .textwidget ul li a,
+  #footer #footer-widget #nav_menu-2 .textwidget ul li a,
+  #footer #footer-widget #nav_menu-3 .textwidget ul li a,
+  #footer #footer-widget #nav_menu-4 .textwidget ul li a,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul li a,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul li a,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul li a,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul li a {
+    color: #fff;
+  }
+  #footer #footer-widget #text-2 .textwidget p a:hover,
+  #footer #footer-widget #nav_menu-2 .textwidget p a:hover,
+  #footer #footer-widget #nav_menu-3 .textwidget p a:hover,
+  #footer #footer-widget #nav_menu-4 .textwidget p a:hover,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container p a:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container p a:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container p a:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container p a:hover,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container p a:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container p a:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container p a:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container p a:hover,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container p a:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container p a:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container p a:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container p a:hover,
+  #footer #footer-widget #text-2 .textwidget ul a:hover,
+  #footer #footer-widget #nav_menu-2 .textwidget ul a:hover,
+  #footer #footer-widget #nav_menu-3 .textwidget ul a:hover,
+  #footer #footer-widget #nav_menu-4 .textwidget ul a:hover,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul a:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul a:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul a:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul a:hover,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul a:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul a:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul a:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul a:hover,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul a:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul a:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul a:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul a:hover,
+  #footer #footer-widget #text-2 .textwidget ul li a:hover,
+  #footer #footer-widget #nav_menu-2 .textwidget ul li a:hover,
+  #footer #footer-widget #nav_menu-3 .textwidget ul li a:hover,
+  #footer #footer-widget #nav_menu-4 .textwidget ul li a:hover,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul li a:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul li a:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul li a:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul li a:hover,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul li a:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul li a:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul li a:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul li a:hover,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul li a:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul li a:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul li a:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul li a:hover {
+    color: #9bb925;
+    text-decoration: none;
+  }
+  #footer #footer-widget #text-2 .textwidget p a.facebook:before,
+  #footer #footer-widget #nav_menu-2 .textwidget p a.facebook:before,
+  #footer #footer-widget #nav_menu-3 .textwidget p a.facebook:before,
+  #footer #footer-widget #nav_menu-4 .textwidget p a.facebook:before,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container p a.facebook:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container p a.facebook:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container p a.facebook:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container p a.facebook:before,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container p a.facebook:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container p a.facebook:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container p a.facebook:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container p a.facebook:before,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container p a.facebook:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container p a.facebook:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container p a.facebook:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container p a.facebook:before,
+  #footer #footer-widget #text-2 .textwidget ul a.facebook:before,
+  #footer #footer-widget #nav_menu-2 .textwidget ul a.facebook:before,
+  #footer #footer-widget #nav_menu-3 .textwidget ul a.facebook:before,
+  #footer #footer-widget #nav_menu-4 .textwidget ul a.facebook:before,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul a.facebook:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul a.facebook:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul a.facebook:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul a.facebook:before,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul a.facebook:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul a.facebook:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul a.facebook:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul a.facebook:before,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul a.facebook:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul a.facebook:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul a.facebook:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul a.facebook:before,
+  #footer #footer-widget #text-2 .textwidget ul li a.facebook:before,
+  #footer #footer-widget #nav_menu-2 .textwidget ul li a.facebook:before,
+  #footer #footer-widget #nav_menu-3 .textwidget ul li a.facebook:before,
+  #footer #footer-widget #nav_menu-4 .textwidget ul li a.facebook:before,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul li a.facebook:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul li a.facebook:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul li a.facebook:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul li a.facebook:before,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul li a.facebook:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul li a.facebook:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul li a.facebook:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul li a.facebook:before,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul li a.facebook:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul li a.facebook:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul li a.facebook:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul li a.facebook:before {
+    content: "\f082";
+    font-family: FontAwesome;
+    padding: 10px 10px;
+    color: #fff;
+    font-size: 2.5em;
+    display: block;
+    float: left;
+  }
+  #footer #footer-widget #text-2 .textwidget p a.facebook:hover,
+  #footer #footer-widget #nav_menu-2 .textwidget p a.facebook:hover,
+  #footer #footer-widget #nav_menu-3 .textwidget p a.facebook:hover,
+  #footer #footer-widget #nav_menu-4 .textwidget p a.facebook:hover,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container p a.facebook:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container p a.facebook:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container p a.facebook:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container p a.facebook:hover,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container p a.facebook:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container p a.facebook:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container p a.facebook:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container p a.facebook:hover,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container p a.facebook:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container p a.facebook:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container p a.facebook:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container p a.facebook:hover,
+  #footer #footer-widget #text-2 .textwidget ul a.facebook:hover,
+  #footer #footer-widget #nav_menu-2 .textwidget ul a.facebook:hover,
+  #footer #footer-widget #nav_menu-3 .textwidget ul a.facebook:hover,
+  #footer #footer-widget #nav_menu-4 .textwidget ul a.facebook:hover,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul a.facebook:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul a.facebook:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul a.facebook:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul a.facebook:hover,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul a.facebook:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul a.facebook:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul a.facebook:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul a.facebook:hover,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul a.facebook:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul a.facebook:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul a.facebook:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul a.facebook:hover,
+  #footer #footer-widget #text-2 .textwidget ul li a.facebook:hover,
+  #footer #footer-widget #nav_menu-2 .textwidget ul li a.facebook:hover,
+  #footer #footer-widget #nav_menu-3 .textwidget ul li a.facebook:hover,
+  #footer #footer-widget #nav_menu-4 .textwidget ul li a.facebook:hover,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul li a.facebook:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul li a.facebook:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul li a.facebook:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul li a.facebook:hover,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul li a.facebook:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul li a.facebook:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul li a.facebook:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul li a.facebook:hover,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul li a.facebook:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul li a.facebook:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul li a.facebook:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul li a.facebook:hover,
+  #footer #footer-widget #text-2 .textwidget p a.instagram:hover,
+  #footer #footer-widget #nav_menu-2 .textwidget p a.instagram:hover,
+  #footer #footer-widget #nav_menu-3 .textwidget p a.instagram:hover,
+  #footer #footer-widget #nav_menu-4 .textwidget p a.instagram:hover,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container p a.instagram:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container p a.instagram:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container p a.instagram:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container p a.instagram:hover,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container p a.instagram:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container p a.instagram:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container p a.instagram:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container p a.instagram:hover,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container p a.instagram:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container p a.instagram:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container p a.instagram:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container p a.instagram:hover,
+  #footer #footer-widget #text-2 .textwidget ul a.instagram:hover,
+  #footer #footer-widget #nav_menu-2 .textwidget ul a.instagram:hover,
+  #footer #footer-widget #nav_menu-3 .textwidget ul a.instagram:hover,
+  #footer #footer-widget #nav_menu-4 .textwidget ul a.instagram:hover,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul a.instagram:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul a.instagram:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul a.instagram:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul a.instagram:hover,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul a.instagram:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul a.instagram:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul a.instagram:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul a.instagram:hover,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul a.instagram:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul a.instagram:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul a.instagram:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul a.instagram:hover,
+  #footer #footer-widget #text-2 .textwidget ul li a.instagram:hover,
+  #footer #footer-widget #nav_menu-2 .textwidget ul li a.instagram:hover,
+  #footer #footer-widget #nav_menu-3 .textwidget ul li a.instagram:hover,
+  #footer #footer-widget #nav_menu-4 .textwidget ul li a.instagram:hover,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul li a.instagram:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul li a.instagram:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul li a.instagram:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul li a.instagram:hover,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul li a.instagram:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul li a.instagram:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul li a.instagram:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul li a.instagram:hover,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul li a.instagram:hover,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul li a.instagram:hover,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul li a.instagram:hover,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul li a.instagram:hover {
+    text-decoration: none;
+  }
+  #footer #footer-widget #text-2 .textwidget p a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-2 .textwidget p a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-3 .textwidget p a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-4 .textwidget p a.facebook:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container p a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container p a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container p a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container p a.facebook:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container p a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container p a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container p a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container p a.facebook:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container p a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container p a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container p a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container p a.facebook:hover:before,
+  #footer #footer-widget #text-2 .textwidget ul a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-2 .textwidget ul a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-3 .textwidget ul a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-4 .textwidget ul a.facebook:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul a.facebook:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul a.facebook:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul a.facebook:hover:before,
+  #footer #footer-widget #text-2 .textwidget ul li a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-2 .textwidget ul li a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-3 .textwidget ul li a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-4 .textwidget ul li a.facebook:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul li a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul li a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul li a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul li a.facebook:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul li a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul li a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul li a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul li a.facebook:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul li a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul li a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul li a.facebook:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul li a.facebook:hover:before {
+    color: #9bb925;
+  }
+  #footer #footer-widget #text-2 .textwidget p a.instagram:before,
+  #footer #footer-widget #nav_menu-2 .textwidget p a.instagram:before,
+  #footer #footer-widget #nav_menu-3 .textwidget p a.instagram:before,
+  #footer #footer-widget #nav_menu-4 .textwidget p a.instagram:before,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container p a.instagram:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container p a.instagram:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container p a.instagram:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container p a.instagram:before,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container p a.instagram:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container p a.instagram:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container p a.instagram:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container p a.instagram:before,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container p a.instagram:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container p a.instagram:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container p a.instagram:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container p a.instagram:before,
+  #footer #footer-widget #text-2 .textwidget ul a.instagram:before,
+  #footer #footer-widget #nav_menu-2 .textwidget ul a.instagram:before,
+  #footer #footer-widget #nav_menu-3 .textwidget ul a.instagram:before,
+  #footer #footer-widget #nav_menu-4 .textwidget ul a.instagram:before,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul a.instagram:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul a.instagram:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul a.instagram:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul a.instagram:before,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul a.instagram:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul a.instagram:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul a.instagram:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul a.instagram:before,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul a.instagram:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul a.instagram:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul a.instagram:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul a.instagram:before,
+  #footer #footer-widget #text-2 .textwidget ul li a.instagram:before,
+  #footer #footer-widget #nav_menu-2 .textwidget ul li a.instagram:before,
+  #footer #footer-widget #nav_menu-3 .textwidget ul li a.instagram:before,
+  #footer #footer-widget #nav_menu-4 .textwidget ul li a.instagram:before,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul li a.instagram:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul li a.instagram:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul li a.instagram:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul li a.instagram:before,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul li a.instagram:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul li a.instagram:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul li a.instagram:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul li a.instagram:before,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul li a.instagram:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul li a.instagram:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul li a.instagram:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul li a.instagram:before {
+    content: "\f16d";
+    font-family: FontAwesome;
+    padding: 10px 10px;
+    color: #fff;
+    display: block;
+    font-size: 2.5em;
+  }
+  #footer #footer-widget #text-2 .textwidget p a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-2 .textwidget p a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-3 .textwidget p a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-4 .textwidget p a.instagram:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container p a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container p a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container p a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container p a.instagram:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container p a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container p a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container p a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container p a.instagram:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container p a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container p a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container p a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container p a.instagram:hover:before,
+  #footer #footer-widget #text-2 .textwidget ul a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-2 .textwidget ul a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-3 .textwidget ul a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-4 .textwidget ul a.instagram:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul a.instagram:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul a.instagram:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul a.instagram:hover:before,
+  #footer #footer-widget #text-2 .textwidget ul li a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-2 .textwidget ul li a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-3 .textwidget ul li a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-4 .textwidget ul li a.instagram:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container ul li a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container ul li a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container ul li a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container ul li a.instagram:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container ul li a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container ul li a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container ul li a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container ul li a.instagram:hover:before,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container ul li a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container ul li a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container ul li a.instagram:hover:before,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container ul li a.instagram:hover:before {
+    color: #9bb925;
+  }
+  #footer #footer-widget #text-2 .textwidget img,
+  #footer #footer-widget #nav_menu-2 .textwidget img,
+  #footer #footer-widget #nav_menu-3 .textwidget img,
+  #footer #footer-widget #nav_menu-4 .textwidget img,
+  #footer #footer-widget #text-2 .menu-menu-informacje-bottom-container img,
+  #footer #footer-widget #nav_menu-2 .menu-menu-informacje-bottom-container img,
+  #footer #footer-widget #nav_menu-3 .menu-menu-informacje-bottom-container img,
+  #footer #footer-widget #nav_menu-4 .menu-menu-informacje-bottom-container img,
+  #footer #footer-widget #text-2 .menu-menu-obslugaklienta-bottom-container img,
+  #footer #footer-widget #nav_menu-2 .menu-menu-obslugaklienta-bottom-container img,
+  #footer #footer-widget #nav_menu-3 .menu-menu-obslugaklienta-bottom-container img,
+  #footer #footer-widget #nav_menu-4 .menu-menu-obslugaklienta-bottom-container img,
+  #footer #footer-widget #text-2 .menu-menu-pomoc-bottom-container img,
+  #footer #footer-widget #nav_menu-2 .menu-menu-pomoc-bottom-container img,
+  #footer #footer-widget #nav_menu-3 .menu-menu-pomoc-bottom-container img,
+  #footer #footer-widget #nav_menu-4 .menu-menu-pomoc-bottom-container img {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 3em;
+  }
+  #footer #footer-widget .widget_nav_menu .menu li a {
+    color: #fff;
+  }
+  #footer #footer-widget .widget_nav_menu .menu li a:hover {
+    color: #9bb925;
+    text-decoration: none;
+  }
+  /*--------------------------------------------------------------
+4.7 - RWD Stopka / Copyright i Wykonanie
+--------------------------------------------------------------*/
+  #footer-base {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: padding: 20px 0;
+    background-color: #00323d;
+  }
+  #footer-base .fotter-bottom {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #footer-base .fotter-bottom .copyright {
+    border-bottom: 1px solid #2c6876;
+    padding-bottom: 10px;
+  }
+  #footer-base .fotter-bottom .powered {
+    padding-top: 10px;
+  }
+  #footer-base .fotter-bottom .copyright,
+  #footer-base .fotter-bottom .powered,
+  #footer-base .fotter-bottom .scroll-top {
+    color: #fff;
+    text-transform: uppercase;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #footer-base .fotter-bottom .copyright a,
+  #footer-base .fotter-bottom .powered a,
+  #footer-base .fotter-bottom .scroll-top a {
+    color: #fff;
+  }
+  #footer-base .fotter-bottom .copyright a:hover,
+  #footer-base .fotter-bottom .powered a:hover,
+  #footer-base .fotter-bottom .scroll-top a:hover {
+    color: #9bb925;
+    text-decoration: none;
+  }
+  /*--------------------------------------------------------------
+4.8 - RWD Sklep / Strona główna
+--------------------------------------------------------------*/
+  body.woocommerce #wrapper {
+    padding: 0px 15px;
+  }
+}
+@media only screen and (max-width: 468px) {
+  body.woocommerce #wrapper ul.products li.product {
+    width: 100%;
+  }
+  body.single-product #content-woocommerce .product .summary table.variations td.label label {
+    color: #2E6C7B;
+    font-weight: 500;
+    line-height: 1.5em;
+    font-size: 2em;
+  }
+  body.single-product #content-woocommerce .product .summary table.variations td.value select#gramatura {
+    min-width: 100%;
+  }
+  .woocommerce div.product form.cart div.quantity {
+    margin-right: 0px;
+  }
+  body.single-product #content-woocommerce .product .summary form.cart .quantity input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  body.single-product #content-woocommerce .product .summary button.single_add_to_cart_button {
+    margin-left: 0px;
+    width: 100%;
+  }
+  body.single-product #content-woocommerce .product .woocommerce-tabs ul.wc-tabs li {
+    width: 100%;
+    margin: 0px;
+  }
+}
